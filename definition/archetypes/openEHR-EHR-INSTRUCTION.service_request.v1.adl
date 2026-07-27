@@ -190,7 +190,7 @@ Implementeringseksempler:
 - Vurder en kliniker som bestiller en kontrolltime om seks uker. «Kontrolltime» vil være «Tjenestenavn». Dersom klinikeren registrerer «6 uker» som foreslått tidspunkt for timen i brukergrensesnittet, vil det kliniske systemet registrere datoen seks uker frem i tid i dataelementet «Tjeneste forfaller».
 
 I mange situasjoner vil det være mulig å registrere stegene som gjennomføres som en del av utførelsen av denne forespørselen ved hjelp av den tilsvarende generiske arketypen ACTION.service. Det vil imidlertid være mange tilfeller der den nødvendige ACTION-arktypen vil være mer formålsspesifikk, fordi datakravene for registrering av mange helserelaterte tjenester krever unike dataelementer, registreringsmønstre eller prosesstrinn. For eksempel: ACTION.screening eller ACTION.health_education.">
-			misuse = <"*Not to be used to record details about the activities that document how an order or request has been carried out - use an ACTION archetype for this purpose. For example ACTION.service archetype or a more purpose-specific archetype from the ACTION class for this purpose. (en)">
+			misuse = <"Skal ikke brukes for å registrere detaljer om aktiviteter som dokumenterer hvordan en bestilling eller forespørsel er utført. Til dette formålet skal en ACTION-arketype benyttes, for eksempel ACTION.service (Helsetjenesteaktivitet) eller en mer formålsspesifikk arketype fra ACTION-klassen.">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -336,8 +336,8 @@ In many situations, it will be possible to record the steps that occur as part o
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"33D0C70DC545C510CFFB83507AE27C1B">
-		["build_uid"] = <"0cda93c2-5e30-43b2-95e1-b67a525b9638">
+		["MD5-CAM-1.0.1"] = <"325FAA6A56144D44D000138130CCC507">
+		["build_uid"] = <"cec1dca4-3aaa-409e-b64e-212e6e39349c">
 		["revision"] = <"1.1.3-alpha">
 	>
 
@@ -707,33 +707,33 @@ ontology
 					comment = <"Som regel tilsvarende HL7 Filler Order Identifier.">
 				>
 				["at0040"] = <
-					text = <"*Service due (en)">
-					description = <"*The date/time or description about timing for provision of the requested service/s. (en)">
-					comment = <"*This data element allows for recording of the timing for the service/s, either as a date and time, an interval of date and time, or a text descriptor. In practice, clinicians will often think in terms of ordering services as relative or approximate timing, for example: 'next available', or  in '3 months'. As clinical systems need more exact parameters to operate on, this '3 months' will usually be converted to an exact date 3 months from the date of recording and stored using this data element. If complex timing or sequences of timings are required, use the CLUSTER.service_direction archetype within the 'Complex timing' SLOT and this data element becomes redundant. (en)">
+					text = <"Dato/tid forfall">
+					description = <"Dato, klokkeslett, tidsintervall eller tidsbeskrivelse for når den forespurte tjenesten skal utføres.">
+					comment = <"Dette dataelementet brukes til å registrere tidspunktet for den forespurte tjenesten som dato og klokkeslett, et tidsintervall eller en tekstlig beskrivelse. I praksis vil helsepersonell ofte angi tidspunkt relativt eller omtrentlig, for eksempel «første ledige time» eller «om 3 måneder». Kliniske systemer vil vanligvis omgjøre slike opplysninger til et konkret tidspunkt og registrere dette i dataelementet. Dersom det er behov for komplekse tidsforløp eller sekvenser av tidspunkter, bør arketypen CLUSTER.service_direction (Tjenesteanvisning) benyttes i SLOT-et «Kompleks timing», og dette dataelementet blir da overflødig.">
 				>
 				["at0062"] = <
-					text = <"Årsak for forespørsel">
-					description = <"*The specific problem needing attention or the clinical question that requires investigation. (en)">
-					comment = <"*Coding of the 'Reason for request' with an external terminology is desirable, if available. This data element allows multiple occurrences to enable the user to record a multiple responses, if required. (en)">
+					text = <"Årsak til forespørsel">
+					description = <"Det spesifikke problemet som krever oppmerksomhet, eller det kliniske spørsmålet som krever nærmere utredning.">
+					comment = <"Koding av «Årsak for forespørselen» med en ekstern terminologi er ønskelig, dersom dette er tilgjengelig. Dette dataelementet tillater flere forekomster for å kunne registrere flere årsaker ved behov.">
 				>
 				["at0064"] = <
 					text = <"Årsaksbeskrivelse">
-					description = <"*Narrative description about the issue or clinical query that needs resolution.  (en)">
+					description = <"Fritekstbeskrivelse av problemstillingen eller det kliniske spørsmålet som ønskes avklart.">
 				>
 				["at0065"] = <
 					text = <"Hensikt">
-					description = <"*Description of the intended outcome of the request. (en)">
-					comment = <"*Coding of the 'Intent' with an external terminology is recommended, if available. This data element allows multiple occurrences to enable the user to record a multiple responses, if required. (en)">
+					description = <"Beskrivelse av det ønskede resultatet av forespørselen.">
+					comment = <"Koding av «Hensikt» med en ekstern terminologi anbefales, dersom dette er tilgjengelig. Dette dataelementet tillater flere forekomster for å kunne registrere flere hensikter ved behov.">
 				>
 				["at0068"] = <
 					text = <"Hastegrad">
 					description = <"Hastegrad for utførelse av tjenesten.">
-					comment = <"*Specific definitions of emergency and urgent will vary between clinical contexts, clinical systems and the nature of the request itself, so have not been defined in this archetype. More precise timing requirements should be specified using the 'Service due' data element or the CLUSTER.service_direction archetype within the 'Complex timing' SLOT. (en)">
+					comment = <"Konkrete definisjoner av «akutt» og «haster» vil variere mellom kliniske kontekster, kliniske systemer og typen forespørsel, og er derfor ikke definert i denne arketypen. Mer presise tidskrav bør registreres ved hjelp av dataelementet «Tjeneste skal utføres innen» eller arketypen CLUSTER.service_direction i SLOT-en «Kompleks timing».">
 				>
 				["at0076"] = <
 					text = <"Supplerende informasjon">
 					description = <"Supplerende informasjon vil ettersendes forespørselen.">
-					comment = <"Registrer som SANN dersom ytterligere informasjon er identifisert, og vil bli ettersendt når den er tilgjengelig. For eksempel: ufullstendige prøvesvar.">
+					comment = <"Registrer som SANN dersom ytterligere informasjon er identifisert, og vil bli ettersendt når den er tilgjengelig. For eksempel: ufullstendige/ventende prøvesvar.">
 				>
 				["at0078"] = <
 					text = <"Informasjonsbeskrivelse">
@@ -741,8 +741,8 @@ ontology
 				>
 				["at0112"] = <
 					text = <"Tilleggsinformasjon">
-					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
-					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+					description = <"Ytterligere informasjon som er nødvendig for å utvide modellen med lokalt innhold eller tilpasse den til andre referansemodeller eller formalismer.">
+					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for tilpasning til FHIR.">
 				>
 				["at0116"] = <
 					text = <"Pasientens behov">
@@ -756,7 +756,7 @@ ontology
 				["at0127"] = <
 					text = <"Rekvisisjonsstatus">
 					description = <"Status for forespørselen oppgitt av rekvirenten.">
-					comment = <"*Status is used to denote whether this is the initial request, or a follow-up request to change or provide supplementary information. Coding with a terminology is preferred, where possible. (en)">
+					comment = <"Status brukes for å angi om dette er den opprinnelige forespørselen, eller en oppfølgende forespørsel for å endre eller supplere tidligere informasjon. Koding med en terminologi er å foretrekke der dette er mulig.">
 				>
 				["at0128"] = <
 					text = <"Svarmottakere">
@@ -792,9 +792,9 @@ ontology
 					description = <"Detaljer om helsepersonellet eller organisasjonen som mottar tjenesteforespørselen.">
 				>
 				["at0148"] = <
-					text = <"*Service type (en)">
+					text = <"Tjenestetype">
 					description = <"Kategorisering av den forespurte tjenesten.">
-					comment = <"*Coding of the 'Service type' with an external terminology is desirable, if available. If the 'Service name' was coded, it is possible for this data point to be derived from the code. (en)">
+					comment = <"Koding av «Tjenestetype» med en ekstern terminologi er ønskelig, dersom dette er tilgjengelig. Dersom «Tjenestenavn» er kodet, kan verdien for dette dataelementet avledes fra den registrerte koden.">
 				>
 				["at0149"] = <
 					text = <"Understøttende informasjon">
@@ -805,14 +805,14 @@ ontology
 					description = <"Ytterligere fritekst om tjenesteforespørselen, som ikke er dekket av andre elementer.">
 				>
 				["at0151"] = <
-					text = <"Kompeks timing">
+					text = <"Kompleks timing">
 					description = <"Detaljer om en kompleks tjenesteforespørsel som trenger komplekse timingangivelser.">
-					comment = <"*For example: 'hourly vital signs observations for 4 hours, then 4 hourly for 20 hours' or 'every third Wednesday for 3 visits' or 'Day 14-16 of the menstrual cycle'. If complex timing or sequences of timings are required using the CLUSTER.service_direction archetype in this SLOT, the 'Service due' data element becomes redundant. (en)">
+					comment = <"For eksempel «timevise observasjoner av vitale tegn i 4 timer, deretter hver 4. time i 20 timer», «hver tredje onsdag ved 3 konsultasjoner» eller «dag 14–16 i menstruasjonssyklusen». Dersom komplekse tidsforløp eller sekvenser av tidspunkter registreres ved hjelp av arketypen CLUSTER.service_direction (Tjenesteanvisning)  i dette SLOT-et, blir dataelementet «Tidspunkt for tjeneste» overflødig.">
 				>
 				["at0152"] = <
 					text = <"Klinisk indikasjon">
-					description = <"*The symptom, sign or diagnosis that necessitates the requested service. (en)">
-					comment = <"*Coding of the 'Clinical indication' with an external terminology is recommended, if available.  This data element allows multiple occurrences to enable the user to record a multiple responses, if required. (en)">
+					description = <"Symptomet, tegnet eller diagnosen som begrunner behovet for den forespurte tjenesten.">
+					comment = <"Koding av «Klinisk indikasjon» med en ekstern terminologi anbefales, dersom dette er tilgjengelig. Dette dataelementet tillater flere forekomster for å kunne registrere flere kliniske indikasjoner ved behov.">
 				>
 				["at0153"] = <
 					text = <"Ordredetaljer">
@@ -820,27 +820,27 @@ ontology
 					comment = <"Koding av ordredetaljer med et kodeverk er ønskelig, dersom tilgjengelig. Dette dataelementet tillater flere forekomster.">
 				>
 				["at0154"] = <
-					text = <"*Clinical context (en)">
-					description = <"*Narrative information about the individual and their situation, providing relevant context for the request. (en)">
+					text = <"Klinisk kontekst">
+					description = <"Fritekstinformasjon om individet og individets situasjon som gir relevant kontekst til forespørselen.">
 				>
 				["at0155"] = <
-					text = <"*Urgent contact (en)">
-					description = <"*Details about the designated contact person or organisation and preferred mode of contact for urgent or emergency notifications related to this request. (en)">
-					comment = <"*For example: if the outcome of the request requires an urgent or emergency response by the requester. (en)">
+					text = <"Hastekontakt">
+					description = <"Opplysninger om en utpekt kontaktperson eller organisasjon, samt foretrukket kontaktmåte for haste- eller nødvarsler knyttet til denne forespørselen.">
+					comment = <"For eksempel dersom resultatet av forespørselen krever en rask eller akutt respons fra den som har sendt forespørselen.">
 				>
 				["at0156"] = <
-					text = <"*Billing guidance (en)">
-					description = <"*A recommendation from the requester to the receiver about the method of payment for the service. (en)">
-					comment = <"*For example: 'Private'; 'Government insurance scheme'; or 'Private insurance'.  (en)">
+					text = <"Betalingsveiledning">
+					description = <"En anbefaling fra rekvirenten til mottakeren om hvordan tjenesten skal betales.">
+					comment = <"For eksempel «Privat», «Folketrygden» eller «Privat forsikring».">
 				>
 				["at0157"] = <
-					text = <"*Responsible payer (en)">
-					description = <"*Details about the individual or organisation who will assume responsibility for payment of the service. (en)">
-					comment = <"*This data element will only be used if a known payer has been identified. For example: an individual, such as a parent on behalf of a child; or an organisation such as a workplace or government insurance scheme. (en)">
+					text = <"Betalingsansvarlig">
+					description = <"Opplysninger om personen eller organisasjonen som har betalingsansvar for tjenesten.">
+					comment = <"Dette dataelementet brukes bare dersom en kjent betaler er identifisert. For eksempel en person, som en forelder på vegne av et barn, eller en organisasjon som en arbeidsgiver eller offentlig finansieringsordning.">
 				>
 				["at0158"] = <
-					text = <"*Eligibility guidance (en)">
-					description = <"*Advice from the requester to the receiver about the individual's eligibility for the requested service. (en)">
+					text = <"Veiledning om tjenesteberettigelse">
+					description = <"Informasjon fra rekvirenten til mottakeren om personens rett til den forespurte tjenesten.">
 				>
 			>
 		>
