@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "62eb06a364bc60cc95d1b7424671405e",
+      "MD5-CAM-1.0.1" : "a92ee352184b67967dc78cdda5e8f093",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
-      "sem_ver" : "50.0.0",
+      "sem_ver" : "51.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -19266,7 +19266,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Bivirkninger før/under behandling",
+            "text" : "Bivirkninger under eller etter behandling",
             "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser.",
             "comment" : "Svarene kan være selvrapporterte."
           },
@@ -19330,7 +19330,7 @@
           },
           "at0005.3" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005.1",
+            "code" : "at0005.3",
             "text" : "Har det oppstått bivirkninger som følge av behandling siden siste kontakt?",
             "description" : "Har det skjedd en komplikasjon, bivirkning, symptom som følge av behandlingen av sykdommen siden siste pasientkontakt? ",
             "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
@@ -21913,7 +21913,7 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
-          "occurrences" : "0..1",
+          "occurrences" : "0..0",
           "nodeId" : "at0.2",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -25722,7 +25722,7 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "overorndet tekst om bivirkninger",
+            "text" : "Overordnet beskrivelse av basline bivirkninger",
             "description" : "Narrativ beskrivelse av sykehistorie/anamnese for et individ."
           },
           "at0002.1" : {
@@ -25735,14 +25735,14 @@
           "at0002.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.2",
-            "text" : "Under behndling",
+            "text" : "Under behandling",
             "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i en templat eller i en applikasjon.",
             "comment" : "Designkommentar:\nhttps://openehr.atlassian.net/wiki/spaces/KLIM/pages/3332243463/Bruk+av+arketypen+CTCAE?ct=1785162403020\nBeslutning etter diskusjon: \nbenytte Anamnese arketypen, med instans av CTCAE, bruker uspesifisert hendelse med disse to eventene: Baseline Event og Under behandlingsevent"
           },
           "at0004.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.1",
-            "text" : "overorndet tekst om bivirkninger",
+            "code" : "at0004.2",
+            "text" : "Overordnet beskrivelse av bivirkninger oppstått",
             "description" : "Narrativ beskrivelse av sykehistorie/anamnese for et individ."
           }
         },
@@ -28694,6 +28694,13 @@
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0043.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
                       "occurrences" : "0..0",
                       "nodeId" : "at0022.1",
@@ -28740,7 +28747,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Bivirkning før/under/etter behandling",
+            "text" : "Bivirkning under/etter behandling",
             "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge forekomst av tidligere overfølsomhetsreaksjoner.",
             "comment" : "Svarene kan være pasientregistrerte.\r\n"
           },
@@ -28750,11 +28757,24 @@
             "text" : "Uspesifikk hendelse (2)",
             "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
           },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Har det oppstått bivirkninger som følge av behandling siden siste kontakt?",
+            "description" : "Finnes det en historikk av overfølsomhetsreaksjoner som er relevant til kartleggingsformålet?",
+            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+          },
           "ac0.10" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.10",
             "description" : ""
+          },
+          "at0043.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.1",
+            "text" : "Overordnet beskrivelse",
+            "description" : "Fritekstbeskrivelse om en historikk av overfølsomhetsreaksjoner som er relevante til kartleggingsformålet."
           }
         }
       },
