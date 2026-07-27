@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "bdc783e30c46bddd1b37d6e111ef2620",
-      "PARENT:MD5-CAM-1.0.1" : "C3C3D1004C0B0E25100780E3B3FE6F3E"
+      "MD5-CAM-1.0.1" : "a954974668f3892880f19aee48653253",
+      "PARENT:MD5-CAM-1.0.1" : "C3C3D1004C0B0E25100780E3B3FE6F3E",
+      "sem_ver" : "0.1.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -242,32 +244,14 @@
             "rmTypeName" : "POINT_EVENT",
             "occurrences" : "0..1",
             "nodeId" : "at0002.3",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "data",
-              "children" : [ {
-                "@type" : "C_COMPLEX_OBJECT_PROXY",
-                "rmTypeName" : "ITEM_TREE",
-                "occurrences" : "1..1",
-                "targetPath" : "/data[at0001]/events[at0002.1]/data[at0003]"
-              } ]
-            } ],
+            "attributes" : [ ],
             "attributeTuples" : [ ]
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "POINT_EVENT",
             "occurrences" : "0..1",
             "nodeId" : "at0002.2",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "data",
-              "children" : [ {
-                "@type" : "C_COMPLEX_OBJECT_PROXY",
-                "rmTypeName" : "ITEM_TREE",
-                "occurrences" : "1..1",
-                "targetPath" : "/data[at0001]/events[at0002.1]/data[at0003]"
-              } ]
-            } ],
+            "attributes" : [ ],
             "attributeTuples" : [ ]
           } ]
         } ],
