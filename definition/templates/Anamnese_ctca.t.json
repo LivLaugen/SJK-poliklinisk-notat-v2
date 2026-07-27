@@ -1,0 +1,806 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "a3a9cf45-c3f1-4713-889c-559bab9e373e",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2026-07-27"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "bdc783e30c46bddd1b37d6e111ef2620",
+      "PARENT:MD5-CAM-1.0.1" : "C3C3D1004C0B0E25100780E3B3FE6F3E"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sv" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sv"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ko" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ko"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ar-sy" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ar-sy"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "it" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "it"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "zh-cn" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "zh-cn"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es-ar" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es-ar"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-OBSERVATION.story.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-OBSERVATION.storyhistory.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "OBSERVATION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "HISTORY",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "events",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "POINT_EVENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ITEM_TREE",
+                "nodeId" : "at0003",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "items",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "nodeId" : "at0004.1",
+                    "attributes" : [ ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_ARCHETYPE_ROOT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0006.1",
+                    "attributes" : [ ],
+                    "attributeTuples" : [ ],
+                    "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-ctcae-003.v1",
+                    "referenceType" : "archetypeOverlay"
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "POINT_EVENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.3",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT_PROXY",
+                "rmTypeName" : "ITEM_TREE",
+                "occurrences" : "1..1",
+                "targetPath" : "/data[at0001]/events[at0002.1]/data[at0003]"
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "POINT_EVENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.2",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT_PROXY",
+                "rmTypeName" : "ITEM_TREE",
+                "occurrences" : "1..1",
+                "targetPath" : "/data[at0001]/events[at0002.1]/data[at0003]"
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "ar-sy" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "إحدى الوقائع (2)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "إحدى الوقائع (3)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        }
+      },
+      "en" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Any event (2)",
+          "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Any event (3)",
+          "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+        }
+      },
+      "es-ar" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "*Any event(en) (2)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "*Any event(en) (3)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        }
+      },
+      "ko" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "*Any event(en) (2)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "*Any event(en) (3)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        }
+      },
+      "nb" : {
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Baseline",
+          "description" : "CTCA baseline registrering - Gjøres før behandling settes igang for å identifisere om kreften gir noen uønskede “Adverse events” "
+        },
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.2",
+          "text" : "Behandlingsforløp",
+          "description" : "CTCA registrering etter behandling - gjentagende registrering som gjøres etter behandling for å se om det er en utvikling av “Adverse events”"
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.3",
+          "text" : "Baseline (2)",
+          "description" : "CTCA baseline registrering - Gjøres før behandling settes igang for å identifisere om kreften gir noen uønskede “Adverse events” "
+        }
+      },
+      "pt-br" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Algum Evento (2)",
+          "description" : "Padrão, ponto indeterminado no tempo ou intervalo do evento que pode ser explicitamente definido em um modelo ou em tempo de execução."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Algum Evento (3)",
+          "description" : "Padrão, ponto indeterminado no tempo ou intervalo do evento que pode ser explicitamente definido em um modelo ou em tempo de execução."
+        }
+      },
+      "it" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Qualsiasi evento (2)",
+          "description" : "Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Qualsiasi evento (3)",
+          "description" : "Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione."
+        }
+      },
+      "de" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Beliebiges Ereignis (2)",
+          "description" : "Standardmäßiger, nicht näher beschriebener Zeitpunkt oder Intervall Ereignis welches in einem Template oder bei der Anwendung genauer definiert werden kann."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Beliebiges Ereignis (3)",
+          "description" : "Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann."
+        }
+      },
+      "nl" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "*Any event(en) (2)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "*Any event(en) (3)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        }
+      },
+      "sv" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Ospecificerad händelse (2)",
+          "description" : "Ospecificerad standardhändelse vid en tidpunkt eller inom ett tidsintervall som explicit kan definieras i en mall eller genereras automatiskt av vissa IT-system."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Ospecificerad händelse (3)",
+          "description" : "Ospecificerad standardhändelse vid en tidpunkt eller inom ett tidsintervall som explicit kan definieras i en mall eller genereras automatiskt av vissa IT-system."
+        }
+      },
+      "zh-cn" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "任何事件 (3)",
+          "description" : "可在模板之中或运行时明确定义的默认的、未明确指定的时间点型/时间型或时间区间型/时间间隔型事件，。"
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "任何事件 (2)",
+          "description" : "可在模板之中或运行时明确定义的默认的、未明确指定的时间点型/时间型或时间区间型/时间间隔型事件，。"
+        }
+      },
+      "fr" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Tout événement (3)",
+          "description" : "Par défaut, événement ponctuel ou d’intervalle non spécifié, pouvant être défini explicitement dans un template ou au moment de l’exécution."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Tout événement (2)",
+          "description" : "Par défaut, événement ponctuel ou d’intervalle non spécifié, pouvant être défini explicitement dans un template ou au moment de l’exécution."
+        }
+      },
+      "sl" : {
+        "at0002.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Katerikoli dogodek (3)",
+          "description" : "Privzeta, nedoločena časovna točka ali dogodek intervala, ki je lahko eksplicitno določen v predlogi ali med izvajanjem."
+        },
+        "at0002.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Katerikoli dogodek (2)",
+          "description" : "Privzeta, nedoločena časovna točka ali dogodek intervala, ki je lahko eksplicitno določen v predlogi ali med izvajanjem."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "b6aba8e0-a920-3d15-96ae-e3824bd829d6",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "Anamnese_ctca",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "a6dc2d86-35b0-416f-a868-6fd1a69e33b5",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "A7617F434767BA4FB95565EE2C02CEE5"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "*To provide a framework for recording any unfavourable and unintended sign, symptom or disease temporally using the CTCAE terminology.\r\nTo provide a framework for recording a CTCAE classification. (en)",
+          "keywords" : [ "ctcae", "Symptom", "Krankheit", "unerwünscht", "Ereignis" ],
+          "use" : "*Use to provide a framework for recording a CTCAE classification, using terms from appropriate MedDRA terminology hierarchies.\r\n\r\nThis archetype is intended to be nested in the 'Specific details' SLOT within either the EVALUATION.problem_diagnosis or CLUSTER.symptom_sign archetypes, or other clinically relevant archetypes. (en)",
+          "misuse" : "*Not to be used for recording details about adverse events outside of the CTCAE classification. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "*To provide a framework for recording any unfavourable and unintended sign, symptom or disease temporally using the CTCAE terminology.\r\nTo provide a framework for recording a CTCAE classification. (en)",
+          "keywords" : [ "CTCAE", "biverkan", "biverkningar", "tecken", "symptom", "sjukdom", "cytostatika" ],
+          "use" : "*Use to provide a framework for recording a CTCAE classification, using terms from appropriate MedDRA terminology hierarchies.\r\n\r\nThis archetype is intended to be nested in the 'Specific details' SLOT within either the EVALUATION.problem_diagnosis or CLUSTER.symptom_sign archetypes, or other clinically relevant archetypes. (en)",
+          "misuse" : "*Not to be used for recording details about adverse events outside of the CTCAE classification. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Et rammeverk for å registrere CTCAE-klassifisering.",
+          "keywords" : [ "ctcae", "sykdomstegn", "symptom", "sykdom", "utilsiktet", "ugunstig", "uønsket", "hendelse", "bivirkning", "toksisitet", "toxicity", "legemiddel", "kreft", "malignitet", "kjemoterapi", "stråling", "proton", "CTC", "senskade" ],
+          "use" : "Bruk som et rammeverk for å registrere CTCAE-klassifisering, ved å bruke koder fra hierarkiet av termer fra MedDRA-terminologien.\r\n\r\nDenne arketypen er tiltenkt å nøstes i CLUSTER.symptom_sign (Symptom/Sykdomstegn) eller EVALUATION.problem_diagnosis (Problem/diagnose) eller en annen klinisk relevant arketype.",
+          "misuse" : "Skal ikke brukes for å registrere uønskede hendelser utenom å klassifisere CTCAE.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a framework for recording a CTCAE classification.",
+          "keywords" : [ "ctcae", "sign", "symptom", "disease", "adverse", "event" ],
+          "use" : "Use to provide a framework for recording a CTCAE classification, using terms from appropriate MedDRA terminology hierarchies.\r\n\r\nThis archetype is intended to be nested in the 'Specific details' SLOT within either the EVALUATION.problem_diagnosis or CLUSTER.symptom_sign archetypes, or other clinically relevant archetypes.",
+          "misuse" : "Not to be used for recording details about adverse events outside of the CTCAE classification.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "purpose" : "Providenciar uma estrutura para registar a classificação CTCAE.",
+          "keywords" : [ "ctcea", "sinal", "sintoma", "doença", "adverso", "evento" ],
+          "use" : "Usar para providenciar uma estrutura para registo da classificação CTCAE, utilizando termos da hierarquia de terminologia MedDRA apropriada.\r\n\r\nÉ pretendido que este arquétipo seja colocado na SLOT 'Specific details' do arquétipo EVALUATION.problem_diagnosis ou do CLUSTER.symptom_sign, ou noutros arquétipos clinicamente relevantes.",
+          "misuse" : "Não usar para registar detalhes de eventos adversos fora da classificação CTCAE.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.ctcae.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-ctcae-003.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "de" : { },
+        "sv" : { },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Common Terminology Criteria for Adverse Events (CTCAE)",
+            "description" : "Et rammeverk for å registrere CTCAE klassifikasjon av en uønsket hendelse, symptom eller sykdomtilstand.",
+            "comment" : "Designkommentar:\nhttps://openehr.atlassian.net/wiki/spaces/KLIM/pages/3332243463/Bruk+av+arketypen+CTCAE?ct=1785162403020\nBeslutning etter diskusjon: \nbenytte Anamnese arketypen, med instans av CTCAE, bruker uspesifisert hendelse med disse to eventene: Baseline Event og Under behandlingsevent"
+          }
+        },
+        "pt-pt" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "3136e0c7-5850-4a19-abb7-24742e3f657e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "rehberg.alina@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Erik Sundvall, Vebjørn Arntzen",
+        "organisation" : "Karolinska Institutet + Karolinska University Hospital, Region Stockholm + Linköping University, Oslo University Hospital",
+        "email" : "erik.sundvall@regionstockholm.se, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen, John Tore Valand",
+        "organisation" : "Oslo University Hospital, Helse Bergen",
+        "email" : "varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-pt"
+      },
+      "author" : {
+        "name" : "Joao Caixeirinho",
+        "email" : "joaorafaelcaixeirinho@gmail.com"
+      },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sv"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ko"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es-ar"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ar-sy"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "it"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "zh-cn"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
