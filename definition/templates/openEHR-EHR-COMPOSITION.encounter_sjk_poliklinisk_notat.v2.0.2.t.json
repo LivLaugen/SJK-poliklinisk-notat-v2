@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "ab38df61f08fe8c956014203d3bbf0b1",
+      "MD5-CAM-1.0.1" : "abb756e00e8067e9e8f295690c753ec1",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
-      "sem_ver" : "48.0.0",
+      "sem_ver" : "49.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -19266,7 +19266,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Bivirkninger av behandling",
+            "text" : "Bivirkninger før/under behandling",
             "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser.",
             "comment" : "Svarene kan være selvrapporterte."
           },
@@ -19320,7 +19320,7 @@
             "code" : "at0028.1",
             "text" : "Registrering av bivikrning før eller under/etter behandling?",
             "description" : "Baseline registrering - Gjøres før behandling settes igang for å identifisere om kreften gir noen uønskede “Adverse events”\n\nUnder/etter behandling - gjentagende registrering som gjøres etter behandling for å se om det er en utvikling av “Adverse events”",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+            "comment" : "\n*Before procedure (qualifier value)\tBefore - 307153007\n *During procedure (qualifier value)\t- 307154001\n*Postprocedural period (qualifier value)\t- 303110006"
           },
           "at0022.3" : {
             "@type" : "ARCHETYPE_TERM",
@@ -19334,6 +19334,13 @@
             "text" : "Har det oppstått bivirkninger som følge av behandling siden siste kontakt?",
             "description" : "Har det skjedd en komplikasjon, bivirkning, symptom som følge av behandlingen av sykdommen siden siste pasientkontakt? ",
             "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+          },
+          "at0004.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Problem/diagnosenavn",
+            "description" : "Navnet på en bekymring, plage, problem eller diagnose, eller grupper av bekymringer, plager, problemer eller diagnoser.",
+            "comment" : "Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig.\n\n*Before procedure (qualifier value)\tBefore - 307153007\n *During procedure (qualifier value)\t- 307154001\n*Postprocedural period (qualifier value)\t- 303110006"
           }
         },
         "de" : {
