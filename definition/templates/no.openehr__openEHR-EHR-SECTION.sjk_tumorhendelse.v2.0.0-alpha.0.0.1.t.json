@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "82f96b74f436e8667a89a5e435243f3f",
+      "MD5-CAM-1.0.1" : "b933d9167b06e597759a026f154e0fd1",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "2.2.3",
+      "sem_ver" : "3.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -191,6 +191,36 @@
         "misuse" : "Não deve ser deixado inalterado ao nível do template.",
         "originalResourceUri" : { },
         "otherDetails" : { }
+      },
+      "pt" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt"
+        },
+        "purpose" : "Para fornecer um cabeçalho de secção genérico que será renomeado ao nível do template para se adequar a um contexto clínico específico.",
+        "keywords" : [ ],
+        "use" : "Use para criar um título de secção ao nível do template que será renomeado para se adequar ao contexto clínico específico. Por exemplo: «Título ad hoc» renomeado para «Resultados do exame».",
+        "misuse" : "Não deve ser deixado inalterado ao nível do template.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "tr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "tr"
+        },
+        "purpose" : "Belirli bir klinik bağlama uyacak şekilde bir şablonda yeniden adlandırılacak genel bir bölüm başlığı sağlamak için.",
+        "keywords" : [ ],
+        "use" : "Bir şablonda, belirli klinik bağlama uyacak şekilde yeniden adlandırılacak bir bölüm başlığı oluşturmak için kullanılır. Örneğin: “Geçici başlık”ın “Muayene bulguları” olarak yeniden adlandırılması.",
+        "misuse" : "Bir şablonda değiştirilmeden bırakılmamalıdır.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
       }
     }
   },
@@ -316,7 +346,9 @@
       },
       "ca" : { },
       "es" : { },
-      "pt-pt" : { }
+      "pt-pt" : { },
+      "pt" : { },
+      "tr" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -484,7 +516,6 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0034.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -519,7 +550,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0028.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -535,10 +566,34 @@
                               "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
-                                "value" : "local"
+                                "value" : "no.sjk.sykdomsstatus"
                               },
-                              "constraint" : [ "ac0.14" ],
-                              "selectedTerminologies" : [ ]
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "no.sjk.sykdomsstatus" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "no.sjk.sykdomsstatus",
+                                "code" : "1",
+                                "value" : "NED (no evidence of disease)"
+                              }, {
+                                "terminologyId" : "no.sjk.sykdomsstatus",
+                                "code" : "2",
+                                "value" : "Stabil sykdom"
+                              }, {
+                                "terminologyId" : "no.sjk.sykdomsstatus",
+                                "code" : "3",
+                                "value" : "Ny(e) tumorhendelse(r)"
+                              }, {
+                                "terminologyId" : "no.sjk.sykdomsstatus",
+                                "code" : "4",
+                                "value" : "Ny primærtumor (secondary primary cancer/ny kreftsykdom) (lag ny sak)",
+                                "translations" : {
+                                  "nb" : "Ny primærtumor (secondary primary cancer/ny kreftsykdom) (ny sak)"
+                                }
+                              }, {
+                                "terminologyId" : "no.sjk.sykdomsstatus",
+                                "code" : "5",
+                                "value" : "Annet"
+                              } ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -548,14 +603,13 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0043.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -585,8 +639,12 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "308489006",
-                                    "value" : "Tumorhendelse (patologisk prosess)"
+                                    "code" : "xxx",
+                                    "value" : "Hentes fra utredning eller et icd-10 søk"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "55342001",
+                                    "value" : "Neoplastisk sykdom"
                                   } ]
                                 } ]
                               } ],
@@ -687,12 +745,6 @@
             "description" : "Is there a history of the specific issue, problem or diagnosis?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
           },
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.14",
-            "description" : ""
-          },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
@@ -711,9 +763,9 @@
           "at0028.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0028.1",
-            "text" : "Har det skjedd sykdomsutvikling (tumor event) siden sist kontakt?",
-            "description" : "Har det skjedd en sykdomsutvikling /tumorhendelse (engelsk: tumor-event) i form av residiv eller progresjon siden siste kontroll.",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+            "text" : "Hva er pasientens sykdomsstatus ved denne kontakten?",
+            "description" : "Hva er sykdomsstatusen til pasienten?\nVed ny primær kreftsykdom må det opprett et nytt kreftforløp/ny sak for å dokumentere denne diagnosen.",
+            "comment" : "Designkommentar:\n1371415000 -Malignant neoplastic disease progression (finding) \n359746009 - Patient's condition stable (finding) \n371001000 - Patient cured (finding) \n271299001 - Patient's condition worsened (finding)\n268910001 - Patient's condition improved (finding)  "
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -724,7 +776,7 @@
           },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
+            "code" : "at0004.1",
             "text" : "Problem/diagnosenavn",
             "description" : "Sykdomsutvikling (patologisk prosess) hos pasienten.",
             "comment" : "Designkommentar:\nSkulle man ha brukt denne koden i stedet:\n\n25173007 | Recurrent neoplasm (disorder) |\n1259237005 | Recurrent malignant neoplasm (disorder) |\n\n419835002 | Tumor progression (finding) |\n1371415000 | Malignant neoplastic disease progression (finding) |\n"
@@ -741,17 +793,17 @@
             "text" : "Hendelsestidspunkt",
             "description" : "Tidsangivelsen for når sykdomsutviklingen (tumor event) ble oppdaget."
           },
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.14",
-            "description" : ""
-          },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.19",
             "description" : ""
+          },
+          "at0043.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.1",
+            "text" : "Merknad / annet",
+            "description" : "Fritekstbeskrivelse om bekymringer, plager, problemer eller diagnoser som er innenfor kartleggingsformålet."
           }
         },
         "de" : {
@@ -775,12 +827,6 @@
             "text" : "Tumorhendelser siden forrige kontakt?",
             "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
             "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
-          },
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.14",
-            "description" : ""
           },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
@@ -811,12 +857,6 @@
             "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
             "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
           },
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.14",
-            "description" : ""
-          },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -825,12 +865,6 @@
           }
         },
         "ca" : {
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.14",
-            "description" : ""
-          },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -839,12 +873,6 @@
           }
         },
         "fr" : {
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.14",
-            "description" : ""
-          },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -853,12 +881,6 @@
           }
         },
         "es" : {
-          "ac0.14" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.14",
-            "description" : ""
-          },
           "ac0.19" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
@@ -959,6 +981,76 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.19",
           "members" : [ "at0023", "at0024" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
+          "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.23" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.23",
+          "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.24" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.24",
+          "members" : [ ]
+        },
+        "ac0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.25",
+          "members" : [ ]
+        },
+        "ac0.26" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.26",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.27" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.27",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "ac0.22" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ ]
+        },
+        "ac0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.34",
+          "members" : [ ]
         }
       }
     },
@@ -3946,6 +4038,21 @@
           "misuse" : "并非旨在用于记录个人（患者本人）所描述的症状 - 对此，请采用群簇型症状原始型 CLUSTER.symptom 来记录，且通常会将后者放在观察型主观临床病史原始型 OBSERVATION.story 之中。\r\n\r\n并非旨在用于记录检查发现/所见 - 对此，请采用与检查相关的群簇型原始型系列，且通常会将后者嵌套在观察型检查原始型 OBSERVATION.exam 当中。\r\n\r\n并非旨在用于记录实验室检验结果或相关的诊断，如病理诊断 - 对此，请选用观察型实验室[检验]原始型系列之中合适的原始型。\r\n\r\n并非旨在用于记录成像检查结果或成像诊断 - 对此，请选用观察型成像/影像学原始型系列之中合适的原始型。\r\n\r\n并非旨在用于记录鉴别诊断（Differential Diagnosis） - 对此，请采用评价型鉴别诊断原始型 EVALUATION.differential_diagnosis。\r\n\r\n并非旨在用于记录就医/就诊原因（Reason for Encounter）或当前主诉（Present Complaint） - 对此，请采用评价型就医/就诊原因原始型 EVALUATION.reason_for_encounter。\r\n\r\n并非旨在用于记录操作[项目] - 对此，请采用行动型操作[项目]原始型 ACTION.procedure。\r\n\r\n并非旨在用于记录关于妊娠的详情 - 对此，请采用评价型妊娠【bf: 哺乳?】状态原始型 EVALUATION.pregnancy_bf_status 和评价型妊娠原始型 EVALUATION.pregnancy 以及相关的原始型。\r\n\r\n并非旨在用于记录关于健康风险或潜在问题的陈述 - 对此，请采用评价型健康风险原始型 EVALUATION.health_risk。\r\n\r\n并非旨在用于记录关于不良反应、过敏/变态反应或不耐的陈述 - 对此，请采用评价型不良反应原始型 EVALUATION.adverse_reaction。\r\n\r\n并非旨在用于明确记录关于并不存在（或否定存在）特定问题或诊断的情况，如“无已知问题或诊断”或“无已知糖尿病”。对此，请采用评价型除外问题/诊断原始型 EVALUATION.exclusion-problem_diagnosis 来表达关于排除特定问题或诊断的明确陈述。\r\n\r\n",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Pour enregistrer des informations détaillées sur un problème de santé spécifique identifié ou sur un diagnostic particulier.\r\n\r\nLa définition d’un problème de santé est délibérément laissée ouverte dans le contexte de la documentation clinique, afin de recenser toute préoccupation, réelle ou perçue, susceptible d’affecter négativement, à quelque degré que ce soit, le bien-être d’une personne. Un problème de santé peut être identifié par la personne concernée, un proche ou un professionnel de santé. En revanche, un diagnostic est défini de manière plus précise sur la base de critères cliniques objectifs et n’est généralement établi que par un professionnel de santé.",
+          "keywords" : [ "problématique", "affection", "problème", "diagnostic", "préoccupation", "blessure", "impression clinique" ],
+          "use" : "À utiliser pour enregistrer des informations détaillées sur un problème de santé spécifique identifié ou sur un diagnostic particulier. \r\n\r\nIl est pratiquement impossible, dans la réalité, d’établir des définitions claires permettant de différencier un « problème » d’un « diagnostic » : nous ne pouvons pas déterminer de manière fiable à quel moment un problème doit être considéré comme un diagnostic. Lorsque les critères de diagnostic ou de classification sont remplis, on peut alors qualifier en toute confiance la condition de « diagnostic formel » ; mais avant que ces conditions ne soient remplies et tant qu’il existe des éléments probants à l’appui, il peut également être valable d’utiliser le terme « diagnostic ». La quantité d’éléments probants requise pour attribuer l’étiquette de « diagnostic » n’est pas facile à définir et, en réalité, varie probablement d’une condition à l’autre. De nombreux comités de normalisation se penchent depuis des années sur ce casse-tête définitionnel sans parvenir à une résolution claire.\r\n\r\nAux fins de la documentation clinique avec cet archétype, le « problème » et le « diagnostic » sont considérés comme un continuum, les niveaux croissants de détail et de preuves à l’appui conférant généralement plus de poids à l’étiquette de « diagnostic ». Dans cet archétype, il n’est pas nécessaire de classer l’affection comme un « problème » ou un « diagnostic ». Les exigences en matière de données pour justifier l'un ou l'autre sont identiques, une structure de données supplémentaire étant requise pour permettre l’intégration des preuves si et quand celles-ci deviennent disponibles. Parmi les exemples de problèmes, on peut citer : le souhait exprimé par la personne de perdre du poids, sans pour autant qu’il y ait de diagnostic formel d’obésité ; ou un problème relationnel avec un membre de la famille. Parmi les exemples de diagnostics formels, on peut citer un cancer soutenu par des antécédents médicaux, des résultats d’examen, des résultats histopathologiques et radiologiques, et qui répond à toutes les exigences des critères diagnostiques connus. Dans la pratique, la plupart des problèmes ou des diagnostics ne se situent pas à l’une ou l’autre extrémité du spectre problème-diagnostic, mais quelque part entre les deux.\r\n\r\nCet archétype peut être utilisé dans de nombreux contextes. Par exemple, pour enregistrer un problème ou un diagnostic clinique lors d’une consultation ; pour alimenter une liste de problèmes persistants ; ou pour fournir un résumé dans un document de compte rendu de sortie.\r\n\r\nDans la pratique, les cliniciens utilisent de nombreux qualificatifs spécifiques au contexte, tels que passé/présent, primaire/secondaire, actif/inactif, admission/sortie, etc. Les contextes peuvent être spécifiques à un lieu, à une spécialité, à un épisode ou à un flux de travail, et cela peut être source de confusion, voire poser des problèmes de sécurité s’ils sont reproduits dans des listes de problèmes ou partagés dans des documents hors du contexte d’origine. Ces qualificatifs peuvent être définis dans des archétypes distincts et être inclus dans le slot « Statut », car leur utilisation varie selon les contextes. On s’attend à ce qu’ils soient principalement utilisés dans le contexte approprié et qu’ils ne soient pas partagés en dehors de ce contexte sans une compréhension claire des conséquences potentielles. Par exemple, un diagnostic principal pour un clinicien peut être un diagnostic secondaire pour un autre spécialiste ; un problème actif peut devenir inactif (ou inversement), ce qui peut avoir un impact sur l’utilisation sûre de l’aide à la décision clinique. En général, ces qualificatifs doivent être appliqués localement dans le contexte du système clinique, et dans la pratique, ces statuts doivent être gérés manuellement par les cliniciens afin de garantir que les listes de problèmes « actuels/passés », « actifs/inactifs » ou « principaux/secondaires » soient cliniquement exactes. \r\n\r\nCet archétype sera utilisé comme composant au sein du dossier médical axés sur les problèmes (Problem Oriented Medical Record), tel que décrit par Larry Weed. D’autres archétypes, représentant des concepts cliniques tels que l’« état pathologique » en tant qu’organisateur global des diagnostics, etc., devront être développés pour soutenir cette approche.\r\n\r\nDans certaines situations, on peut supposer que l’identification d’un diagnostic relève exclusivement de l’expertise des médecins, mais ce n’est pas l’objectif de cet archétype. Les diagnostics peuvent être enregistrés à l’aide de cet archétype par n’importe quel professionnel de santé.",
+          "misuse" : "À ne pas utiliser pour enregister les symptômes tels que décrits par la personne concernée — utiliser l’archétype CLUSTER.symptom, généralement au sein de l’archétype OBSERVATION.story.\r\n\r\nÀ ne pas utiliser pour enregistrer les résultats d’examens — utiliser la famille d’archétypes CLUSTER liés aux examens, généralement imbriqués dans l’archétype OBSERVATION.exam.\r\n\r\nÀ ne pas utiliser pour enregistrer les résultats d’analyses de laboratoire ou les diagnostics associés, par exemple les diagnostics pathologiques — utilisez un archétype approprié de la famille des archétypes OBSERVATION relatifs au laboratoire.\r\n\r\nÀ ne pas utiliser pour enregistrer les résultats d’examens d’imagerie ou les diagnostics d’imagerie — utilisez un archétype approprié de la famille des archétypes OBSERVATION relatifs à l’imagerie.\r\n\r\nÀ ne pas utiliser pour enregister des « diagnostics différentiels » : utilisez l’archétype EVALUATION.differential_diagnosis.\r\n\r\nÀ ne pas utiliser pour enregistrer le « motif de la consultation » ou la « plainte principale » : utilisez l’archétype EVALUATION.reason_for_encounter.\r\n\r\nÀ ne pas utiliser pour enregistrer des interventions : utilisez l’archétype ACTION.procedure.\r\n\r\nÀ ne pas utiliser pour enregister des informations relatives à la grossesse — utilisez les archétypes EVALUATION.pregnancy_bf_status, EVALUATION.pregnancy et les archétypes associés.\r\n\r\nÀ ne pas utiliser pour enregister des informations concernant des risques pour la santé ou des problèmes potentiels — utilisez l’archétype EVALUATION.health_risk.\r\n\r\nÀ ne pas utiliser pour enregister des déclarations concernant des effets indésirables, des allergies ou des intolérances — utilisez l’archétype EVALUATION.adverse_reaction.\r\n\r\nÀ ne pas utiliser pour enregister l’absence (ou la présence négative) d’un problème ou d’un diagnostic, par exemple « Aucun problème ou diagnostic connu » ou « Aucun diabète connu ». Utilisez l’archétype EVALUATION.exclusion-problem_diagnosis pour exprimer une affirmation positive concernant l’exclusion d’un problème ou d’un diagnostic.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -3973,7 +4080,39 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0002.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "xxx",
+                        "value" : "Hentes fra utredning eller et icd-10 søk"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "55342001",
+                        "value" : "Neoplastisk sykdom"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -4121,24 +4260,6 @@
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0046.8",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-problem_qualifier-001.v2",
-              "referenceType" : "archetypeOverlay"
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0046.3",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-001.v1",
-              "referenceType" : "archetypeOverlay"
-            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0073.1",
@@ -4173,6 +4294,24 @@
               "nodeId" : "at0069.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0046.8",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-problem_qualifier-001.v2",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0046.3",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-001.v1",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -4204,13 +4343,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
             "description" : ""
-          },
-          "at0080" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
-            "text" : "Impacto",
-            "description" : "Evaluación global del impacto o relevancia de un problema de salud para un paciente concreto.",
-            "comment" : "El mismo diagnóstico, con la misma gravedad, puede tener un impacto diferente en cada paciente. Este factor de relevancia implica ajustar el impacto general de ese problema de salud según las características del paciente.\r\nPor ejemplo: Dos pacientes tienen el mismo diagnóstico: quemadura de primer grado.\r\nUno es una persona sana; el otro, un paciente diabético.\r\nEl impacto de ese problema en un paciente diabético es MAYOR (mayor riesgo de infección, mayor tiempo de recuperación).\r\nEste elemento está destinado a permitir múltiples tipos de impacto, incluidos pero no limitado a: tratamiento clínico, funcionamiento en el hogar o vida laboral."
           },
           "at0081" : {
             "@type" : "ARCHETYPE_TERM",
@@ -4270,54 +4402,6 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Problem/Diagnose",
-            "description" : "Angaben über einen einzelnen identifizierten Gesundheitszustand, eine Verletzung, eine Behinderung oder ein Problem, welches das körperliche, geistige und/oder soziale Wohlergehen einer Einzelperson beeinträchtigt.",
-            "comment" : "Eine klare Abgrenzung zwischen Problem und Diagnose ist in der Praxis nicht einfach zu erreichen. Für die Zwecke der klinischen Dokumentation mit diesem Archetyp werden Problem und Diagnose als ein Kontinuum betrachtet, mit zunehmendem Detaillierungsgrad und unterstützenden Beweisen, die in der Regel dem Etikett \"Diagnose\" Gewicht verleihen."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Name des Problems/ der Diagnose",
-            "description" : "Namentliche Identifikation des Problems oder der Diagnose.",
-            "comment" : "Wo möglich, ist die Kodierung des Problems oder der Diagnose über eine Terminologie zu bevorzugen."
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Anatomische Stelle (strukturiert)",
-            "description" : "Eine strukturierte anatomische Lokalisation des Problems oder der Diagnose.",
-            "comment" : "Verwenden Sie diesen SLOT, um die Archetypen CLUSTER.anatomical_location oder CLUSTER.relative_location einzufügen, wenn die Anforderungen für die Aufnahme der anatomischen Position zur Laufzeit der Anwendung bestimmt werden oder komplexere Modellierungen wie z.B. relative Positionen erforderlich sind. Ist die anatomische Lokalisation über präkoordinierte Codes im Namen des Problems/Diagnose enthalten, wird die Verwendung dieses SLOT überflüssig."
-          },
-          "at0077" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0077",
-            "text" : "Datum/ Zeitpunkt des Auftretens/ der Erstdiagnose",
-            "description" : "Geschätzte oder exakte Zeit (bzw. Datum), zu der die Krankheitsanzeichen oder Symptome zum ersten mal beobachtet wurden.",
-            "comment" : "Datumswerte, die als \"Alter zu Beginn\" erfasst/importiert werden, sollten anhand des Geburtsdatums der Person in ein Datum umgewandelt werden."
-          },
-          "at0078" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0078",
-            "text" : "Ursache",
-            "description" : "Die Ursache, eine Reihe von Ursachen oder eine Art und Weise der Verursachung des Problems oder der Diagnose.",
-            "comment" : "Auch bekannt als „Ätiologie“. Die Codierung mit einer externen Terminologie wird nach Möglichkeit bevorzugt."
-          },
-          "at0079" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "Variante",
-            "description" : "Spezifische Variante oder Subtyp der Diagnose, falls relevant.",
-            "comment" : "Zum Beispiel: „Akute motorische axonale Neuropathie“ als Variante des Guillain-Barre-Syndroms. Wo möglich, ist die Kodierung des Namens der Variante über eine Terminologie zu bevorzugen."
-          },
-          "at0080" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
-            "text" : "*DV_TEXT (en)",
-            "description" : ""
-          },
           "at0081" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0081",
@@ -4367,20 +4451,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.4",
             "description" : ""
-          },
-          "at0079" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "Variant",
-            "description" : "Specific variant or subtype of the Diagnosis, if relevant.",
-            "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
-          },
-          "at0080" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
-            "text" : "Impact",
-            "description" : "Overall assessment of the impact of a health problem for the specific patient. ",
-            "comment" : "The same diagnosis, with the same severity, can have a different impact on each patient. This relevance qualifier implies adjusting the overall impact of that health problem according to the patient's characteristics.\r\nFor example: Two patients have the same diagnosis. First-degree burn.\r\nOne is a healthy person, the other is a diabetic patient.\r\nThe impact for that problem in a diabetic patient is HIGHER (more risk of infection..., longuer time healing).\r\nThis element is meant to allow for multiple types of impact, including but not limited to: clinical treatment, home functioning, work life."
           },
           "at0081" : {
             "@type" : "ARCHETYPE_TERM",
@@ -4496,19 +4566,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
             "description" : ""
-          },
-          "at0074" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0074",
-            "text" : "Mistenkt",
-            "description" : "Diagnosen er identifisert med en lav grad av sikkerhet."
-          },
-          "at0080" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
-            "text" : "Innvirkning",
-            "description" : "Overordnet vurdering av innvirkningen et helseproblem har for individet.",
-            "comment" : "Den samme diagnosen, med samme alvorlighetsgrad, kan ha ulik innvirkning på ulike pasienter. Denne relevanskvalifikatoren innebærer å justere den totale påvirkningen av helseproblemet basert på pasientens individuelle medisinske og funksjonelle forutsetninger. \r\nFor eksempel: To pasienter har samme diagnose – en førstegradsforbrenning. Den ene er frisk, den andre har diabetes. Innvirkningen for en diabetiker er høyere (større risiko for infeksjon, lengre tilhelingstid osv.). Dette elementet er ment å åpne for registrering av flere typer påvirkning, for eksempel innen klinisk behandling, funksjonsevne i hjemmet eller arbeidsliv."
           },
           "at0081" : {
             "@type" : "ARCHETYPE_TERM",
@@ -4627,81 +4684,6 @@
             "text" : "Anatomisk plats",
             "description" : "Identifiering av problemets eller diagnosens anatomiska plats.",
             "comment" : "Kodning av den anatomiska platsens namn med en terminologi är att föredra, om det är tillämpligt. Använd det här fältet för att dokumentera förkoordinerade anatomiska platser. Om kraven för att dokumentera den anatomiska platsen bestäms automatiskt av applikationen eller kräver mer komplicerad modellering som exempelvis relativa platser, använd i så fall Cluster.anatomical_location eller cluster. relative_location inom \"Strukturerad anatomisk plats\" - fältet i denna arketyp. I detta fält är det möjligt att dokumentera kliniska scenarier som exempelvis att beskriva ett utslag på flera platser, men där alla andra egenskaper är identiska. Om den anatomiska platsen ingår i problem-och diagnos-namnet via förkoordinerade koder, blir detta fält överflödigt."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Svårighetsgrad",
-            "description" : "En bedömning av problemets eller diagnosens totala svårighetsgrad.",
-            "comment" : "Det här fältet är överflödigt om svårighetsgraden är inkluderad i benämningen av problemet eller diagnosen med prekoordinerade koder. En mer specifik svårighetsgrad kan dokumenteras i SLOT ”Specifika detaljer”."
-          },
-          "at0009" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "Klinisk beskrivning",
-            "description" : "Beskrivning av problemet eller diagnosen.",
-            "comment" : "Används för att ge en bakgrund och sammanhang, inklusive utveckling, episoder, framsteg och andra relevanta detaljer om problemet eller diagnosen."
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "Anatomisk plats",
-            "description" : "Identifiering av problemets eller diagnosens anatomiska plats.",
-            "comment" : "Om möjligt, koda den anatomiska platsens namn med en terminologi. Använd det här fältet för att dokumentera prekoordinerade anatomiska platser. \r\n\r\nOm kraven på dokumentation av den anatomiska platsen bestäms vid körning av applikationen eller kräver mer komplex modellering, till exempel relativa platser (exempelvis 3 cm ovanför vänster knä), använd CLUSTER.anatomical_location eller CLUSTER.relative_location i SLOT \"Strukturerad anatomisk plats\" i denna arketyp. Förekomster av detta dataelement är obegränsat för att möjliggöra kliniska scenarier som att beskriva utslag på flera platser, men där alla andra egenskaper är identiska. Om den anatomiska platsen ingår i \"Benämning på problem/diagnos\" genom prekoordinerade koder blir detta fält överflödigt."
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Datum och tid för tillfrisknande",
-            "description" : "Av sjukvårdspersonal uppskattat eller faktiskt datum och tid för tillfrisknande eller remission.",
-            "comment" : "Partiellt datum är acceptabelt. Om patienten är under ett år, är ett fullständigt datum eller minimum månad och år nödvändigt för korrekta åldersberäkningar, exempelvis om de används för beslutsstöd. Dokumenterad eller importerad \"bekräftat tillfrisknande\" bör beräknas till ett datum för tillfrisknande baserat på födelsedatum."
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Strukturerad anatomisk plats",
-            "description" : "En strukturerad anatomisk plats för problemet eller diagnosen.",
-            "comment" : "Använd denna SLOT för att infoga CLUSTER.anatomical_location- eller CLUSTER.relative_location-arketyper om den anatomiska platsen bestäms automatiskt av applikationen eller kräver mer komplicerad modellering, som exempelvis relativa platser. Det här fältet är överflödigt om den anatomiska platsen är inkluderad i benämningen av problemet eller diagnosen med prekoordinerade koder."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Specifika detaljer",
-            "description" : "Ytterligare detaljer som krävs för att dokumentera de egenskaper som är unika för problemet eller diagnosen.",
-            "comment" : "Fältet kan innehålla strukturerade detaljer om klassificering eller stadieindelning av diagnosen, som diagnostiska kriterier, klassificeringskriterier eller formella bedömningar av svårighetsgraden, såsom \"Gemensam terminologi för biverkningar\"."
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Status",
-            "description" : "Strukturerade specifika detaljer om den diagnostiska processen såsom plats, område, episod eller arbetsflöde.",
-            "comment" : "Använd fältet med försiktighet eftersom användningen varierar i praktiken och kan inte garanteras om inte användningen är tydligt definierad. Exempelvis status på:\r\n- Aktivitet, såsom aktiv, inaktiv, tillfrisknad, i remission\r\n- Förlopp, såsom initial, interimistisk, preliminär, slutlig\r\n- Tid, såsom nuvarande, tidigare\r\n- Episod, såsom första, nytt, pågående\r\n- Vårdtillfälle, såsom inskrivning, utskrivning\r\n- Klassificering, såsom primär, sekundär"
-          },
-          "at0071" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0071",
-            "text" : "Tilläggsinformation",
-            "description" : "Plats för tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.",
-            "comment" : "Exempelvis lokala informationskrav eller metadata för anpassning till FHIR- eller CIMI-motsvarigheter."
-          },
-          "at0076" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0076",
-            "text" : "Bekräftad",
-            "description" : "Diagnosen har bekräftats mot kända kriterier."
-          },
-          "at0078" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0078",
-            "text" : "Orsak",
-            "description" : "En eller flera orsaker till problemet eller diagnosen, eller dess uppkomstsätt",
-            "comment" : "Även känt som \"etiologi\". Om möjligt, koda med en terminologi."
-          },
-          "at0080" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
-            "text" : "*DV_TEXT (en)",
-            "description" : ""
           },
           "at0081" : {
             "@type" : "ARCHETYPE_TERM",
@@ -4966,13 +4948,6 @@
             "description" : "Identificació d'un lloc corporal per la localització del problema o diagnòstic.",
             "comment" : "*Coding of the name of the anatomical location with a terminology is preferred, where possible.\r\nUse this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant.(en)"
           },
-          "at0080" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
-            "text" : "Impacte",
-            "description" : "Avaluació global de l'impacte o rellevància d'un problema de salut per a un pacient concret.",
-            "comment" : "El mateix diagnòstic, amb la mateixa gravetat, pot tenir un impacte diferent en cada pacient. Aquest qualificador de rellevància implica ajustar l'impacte global d'aquest problema de salut segons les característiques del pacient.\r\nPer exemple: Dos pacients tenen el mateix diagnòstic. Cremada de primer grau.\r\nUn és una persona sana, l'altre és un pacient diabètic.\r\nL'impacte d'aquest problema en un pacient diabètic és MÉS ALT (més risc d'infecció..., més temps de curació).\r\nAquest element està pensat per permetre múltiples tipus d'impacte, incloent-hi, entre d'altres: tractament clínic, funcionament a casa, activitats de vida diària o vida laboral."
-          },
           "at0081" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0081",
@@ -4994,6 +4969,21 @@
             "text" : "*Category (en)",
             "description" : "*An overarching grouping for the problem or diagnosis identified in 'Problem/Diagnosis name'. (en)",
             "comment" : "*For example 'Neoplastic disease', 'Ischemic heart disease' or ‘Anxiety disorder’. Coding with an external terminology is preferred, where possible. (en)"
+          }
+        },
+        "fr" : {
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "at0081" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0081",
+            "text" : "Category",
+            "description" : "An overarching grouping for the problem or diagnosis identified in 'Problem/Diagnosis name'.",
+            "comment" : "For example 'Neoplastic disease', 'Ischemic heart disease' or ‘Anxiety disorder’. Coding with an external terminology is preferred, where possible."
           }
         }
       },
@@ -5178,6 +5168,20 @@
         "email" : "linforest@163.com"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Jonas Bucher",
+        "organisation" : "Cistec AG",
+        "email" : "jonas.bucher@cistec.com"
+      },
+      "otherDetails" : { }
     } ]
   } ],
   "originalLanguage" : {
@@ -5318,5 +5322,35 @@
       "email" : "vanessapereira@protonmail.com"
     },
     "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt"
+    },
+    "author" : {
+      "name" : "Vanessa Pereira",
+      "organisation" : "Luxembourg Institute of Health (LIH)",
+      "email" : "vanessapereira@protonmail.com"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "tr"
+    },
+    "author" : {
+      "name" : "Olha Nikolaieva",
+      "organisation" : "University Hospital Basel",
+      "email" : "olha.nikolaieva@usb.ch"
+    },
+    "otherDetails" : {
+      "other_contributors" : "Koray Atalag, GALATA-Digital, New Zealand"
+    }
   } ]
 }
