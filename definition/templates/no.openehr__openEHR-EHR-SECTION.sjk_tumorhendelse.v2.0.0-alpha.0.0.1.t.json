@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "b35a363939f376f04a8848b5deec6994",
+      "MD5-CAM-1.0.1" : "05eb7b0dac9d6841f58583ad8678df02",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "3.0.1",
+      "sem_ver" : "3.0.2",
       "build_uid" : ""
     },
     "details" : {
@@ -4538,7 +4538,7 @@
             "code" : "at0002.1",
             "text" : "Problem/diagnosenavn",
             "description" : "Identifisering av problemet eller diagnosen ved hjelp av navn.",
-            "comment" : "Designkommentar:\nHer hentes det diagnose fra sykehistorie hvis det er lagt inn der. Dette vises ikke i skjermbildet. I senere versjoner bør kanksje denne vises. \nHvis det ikke er lagt inn noe i diagnose i sykehistorie eksponeres dette feltet og man må legge inn diagnosen manuelt, per nå i fritekst, men kanskje det bør være kodet. "
+            "comment" : "Designkommentar:\nSkal vises i skjermbildet\nSkal hentes fra satt diagnose i sykehistorien. \n\n\nHvis det ikke er lagt inn noe i diagnose i sykehistorie  eksponeres dette feltet og man må legge inn diagnosen manuelt, per nå i fritekst, men kanskje det bør være kodet. "
           },
           "at0077.1" : {
             "@type" : "ARCHETYPE_TERM",
