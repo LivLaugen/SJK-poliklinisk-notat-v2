@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "d717c883ca22c9ebc4157a52aeba71d7",
+      "MD5-CAM-1.0.1" : "f3cd3c37af7da71e641e708761c2006d",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "7.0.0",
+      "sem_ver" : "8.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -9678,6 +9678,14 @@
                     "terminologyId" : "local_terms",
                     "code" : "xxxx",
                     "value" : "Transformasjon"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "25173007",
+                    "value" : "Recurrent neoplasm (disorder)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "1371415000",
+                    "value" : "Malignant neoplastic disease progression (finding)"
                   } ]
                 } ]
               } ],
