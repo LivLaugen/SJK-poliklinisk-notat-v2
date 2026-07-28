@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "b933d9167b06e597759a026f154e0fd1",
+      "MD5-CAM-1.0.1" : "b35a363939f376f04a8848b5deec6994",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "3.0.0",
+      "sem_ver" : "3.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -765,7 +765,7 @@
             "code" : "at0028.1",
             "text" : "Hva er pasientens sykdomsstatus ved denne kontakten?",
             "description" : "Hva er sykdomsstatusen til pasienten?\nVed ny primær kreftsykdom må det opprett et nytt kreftforløp/ny sak for å dokumentere denne diagnosen.",
-            "comment" : "Designkommentar:\n1371415000 -Malignant neoplastic disease progression (finding) \n359746009 - Patient's condition stable (finding) \n371001000 - Patient cured (finding) \n271299001 - Patient's condition worsened (finding)\n268910001 - Patient's condition improved (finding)  "
+            "comment" : "Designkommentar:\n1371415000 -Malignant neoplastic disease progression (finding) \n359746009 - Patient's condition stable (finding) \n371001000 - Patient cured (finding) \n271299001 - Patient's condition worsened (finding)\n268910001 - Patient's condition improved (finding) \n371314008 - Disease condition finding \n51231003 - Disease condition determination, cured (finding)\n1194003 - Disease condition determination, well controlled (finding)\n28876000 - Disease condition determination, uncontrolled (finding)\n\n"
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
