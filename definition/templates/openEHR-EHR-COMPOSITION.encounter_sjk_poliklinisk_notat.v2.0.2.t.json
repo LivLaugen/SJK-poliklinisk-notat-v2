@@ -24,7 +24,7 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "65f79a409563f8d856fe9a765e595307",
+      "MD5-CAM-1.0.1" : "7cf029a9001b3fb1419a666a3d694d29",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "sem_ver" : "52.0.0",
@@ -28273,7 +28273,85 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "FD258D2DF9BB47912DE45DD61C7DFC12"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation der Sauerstoffmenge in der Luft, die die Person zum Zeitpunkt der Beobachtung einatmet oder die Sauerstoffmenge, die als Teil einer Behandlung verabreicht werden soll.\r\neiner Anordnung",
+          "keywords" : [ "Atmung", "Sauerstoff", "Luft", "Beatmung", "Respiration", "Flussrate", "Therapie", "O2", "O₂", "PaO2", "FiO2" ],
+          "use" : "Diesen Archetypen innerhalb eines INSTRUCTION-Archetyps zur Angabe einer Behandlung mit Sauerstoffs, innerhalb eines ACTION-Archetyps zur Aufzeichnung der durchgeführten Sauerstofftherapie oder innerhalb eines OBSERVATION-Archetyps wie Blutgase oder Atmung als Teil des Patientenzustands, bei dem die Kenntnis des Luftsauerstoffstatus für die Interpretation der Beobachtung entscheidend ist.\r\n\r\nDer SLOT \"Details zur Sauerstoffzufuhr\" kann verwendet werden, um zusätzliche strukturierte Informationen über die Sauerstoffzufuhr zu spezifizieren, z.B. Befeuchtung oder assistierte Beatmung. Dies ist dann relevant, wenn ein OBSERVATION-Archetyp auf der obersten Ebene gibt, wo dieser Archetyp verschachtelt ist, z.B. OBSERVATION.indirect_oximetry. In anderen Anwendungsfällen in denen die Sauerstoffzufuhr selbst das Konzept ist, z.B. bei einem Archetyp über mechanische Beatmung, ist dieser Archetyp sinnvoll, um die Sauerstoffmenge zu erfassen, die die Person empfängt.\r\n\r\nDer Archetyp kann auch bei der Berechnung des Verhältnisses FiO₂/PaO₂, zusätzlich zu anderen Algorithmen in der Intensivmedizin z.B. dem Sauerstoff-Extraktionsverhältnis usw. verwendet werden\r\n\r\nSofern nicht anders angegeben, wird angenommen, dass der Luftdruck dem Durck auf Meereshöhe entspricht. \r\n\r\nWo nicht ausdrücklich angegeben, können die Werte O₂, FiO₂ von 0,21 und die Sauerstoffdurchflussrate von Null angenommen werden.\r\n\r\n'Eingeatmeter Sauerstoff' impliziert die Sauerstoffmenge, die verordnet oder verabreicht wurde und normalerweise in den klinischen Aufzeichnungen angegeben wird, z.B. \"der Patient ist auf 30% Sauerstoff\" und ist nicht dazu gedacht die tatsächliche \"physiologische\" Sauerstoffmenge, die der Patient erhält, zu erfassen, die je nach Verabreichungsmethode und anderen äußeren Bedingungen variiert, wie z.B. ob die Person flach atmet oder häufig die Nasensonde entfernt.",
+          "misuse" : "Nicht zur Darstellen von anderen eingeatmeten Gasen wie Distickstoffoxid verwenden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Andel administrerad eller ordinerad syrgas i inandningsluft.",
+          "keywords" : [ "andning", "oxygen", "syre", "syrgas", "luft", "respiration", "flöde", "flödeshastighet", "syrgastillförsel", "syrgasbehandling", "O2", "O₂", "FiO2" ],
+          "use" : "Kan användas i INSTRUCTION-arketyper för att specificera ordination av syrgas, i ACTION-arketyper för att registrera syrgasbehandling. \r\nKan även användas i OBSERVATION-arketyper (exempelvis Andning) som del av patientens tillstånd (state) när kunskap om syrgaskoncentration är viktig för att kunna tolka observationen.\r\n\r\nFältet \"Detaljer om administrationssätt\" kan användas för att ange strukturerad information om syretillförseln, exempelvis befuktning eller assisterad ventilation. Detta är relevant om det finns en OBSERVATION-arketyp på toppnivå där den här arketypen är inkapslad, exempelvis Pulsoximetri (OBSERVATION.pulse_oximetry). I andra användningsfall, där själva syretillförseln är begreppet i fokus, till exempel en arketyp om mekanisk ventilation, kan denna arketyp att vara användbar för att registrera mängden syre som individen får.\r\n\r\nKan även användas vid beräkning av förhållandet FiO₂/PaO₂, i tillägg till andra algoritmer inom intensivvård, exempelvis syreextraktionskvot.\r\n\r\nAtmosfärstrycket antas motsvara trycket vid havsnivån, om inget annat anges.\r\n\r\nOm inget annat anges så antas värden på 21% O₂, FiO₂ på 0,21 och syrgasflöde på noll liter per minut antas.\r\n\r\n\"Inandad syrekoncentration\" innebär mängden syre som har ordinerats eller administrerats som normalt registreras i patientjournal t.ex. \"patienten är på 30% syre\" och är inte avsedd att fånga den faktiska \"fysiologiska\" mängden syre som patienten får, vilket kan variera beroende på administrationssätt och andra yttre förhållanden, till exempel om personen andas ytligt eller är tar ofta bort näsgrimman.",
+          "misuse" : "Använd ej för andra gaser, exempelvis lustgas.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para registrar la cantidad de oxígeno administrada al sujeto en el momento de la observación. Se asumen valores de 21% de O2, FiO2 de 0,21 y velocidad de flujo de oxígeno de cero.",
+          "keywords" : [ "respirando", "oxígeno", "ambiental", "FiO2" ],
+          "use" : "Puede ser usado dentro de un arquetipo ACTION para especificar oxígenoterapia o dentro de arquetipos OBSERVATION tales como Gases arteriales o Respiraciones, como parte del estado del paciente, donde el conocimiento de la concentración de oxígeno ambiental es crítica para la interpretación de la observación.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For registrering av andel oksygen tilgjengelig i den luften pasienten innånder på observasjonstidspunktet, eller mengden oksygen som skal gis dersom registreringen er del av en forordning.",
+          "keywords" : [ "pusting", "respirasjon", "luft", "oksygen", "O2", "innpust", "inspirasjon", "FiO2", "oksygentilførsel", "ånding", "O₂", "PaO2" ],
+          "use" : "Brukes i en INSTRUCTION-arketype for å spesifisere en oksygenforordning, i en ACTION-arketype for å dokumentere oksygenterapi utført, eller i en OBSERVATION-arketype, som for eksempel \"Oksimetri\" eller \"Åndedrett\" som en del av pasientstatus, hvor kunnskap om eventuell oksygentilførsel er kritisk for tolking av observasjonen.\r\n\r\nSLOT'et \"Detaljer om administrasjonsmåte\" kan bli brukt til å legge til ytterligere strukturert informasjon om administrasjon av oksygen, for eksempel om det er med luftfukting eller mekanisk ventilering. Dette vil være relevant om det er en OBSERVATION-arketype på toppnivå der denne arketypen er nøstet, for eksempel OBSERVATION.indirect_oximetry. I andre brukstilfeller, der oksygentilførsel i seg selv er konseptet, for eksempel i en arketype som omhandler respiratorbehandling, vil denne arketypen være nyttig for å registrere mengden oksygen individet får tilført.\r\n\r\nBrukes også i kalkulasjoner av FiO₂/PaO₂-ratio i tillegg til andre algoritmer, som for eksempel oksygenekstrasjonsratio, etc.\r\n\r\nAtmosfærisk trykk er antatt å være tilsvarende som ved havoverflaten, dersom det ikke er nærmere angitt.\r\n\r\nHvis det ikke er angitt nærmere og ingen ekstra oksygentilførsel er gitt, kan det antas at individet er i omgivelser der det er 21% O₂, FiO₂ er 0.21.\r\n\r\nSelv om konseptnavnet i denne arketypen er \"Innåndet oksygen\" betyr det ikke at individet nødvendigvis puster inn den mengden oksygen/oksygenblanding som er ordinert eller gitt. \r\n For eksempel kan det være rapportert i kliniske journaler at \"pasienten får 3 liter O₂ på nesekateter\". Den faktisk innpustede oksygenblandingen vil variere med administrasjonsmåte eller andre utenomforliggende faktorer, for eksempel om individet puster overfladisk eller til stadighet fjerner nesekateter.",
+          "misuse" : "Skal ikke brukes for andre innpustede gasser, som for eksempel nitrogenoksid.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the amount of oxygen available in the air the subject inspires at the time of observation, or the amount of oxygen that is to be delivered, if part of an order.",
+          "keywords" : [ "breathing", "oxygen", "air", "respiration", "flow rate", "therapy", "O2", "O₂", "PaO2", "FiO2" ],
+          "use" : "Use within an INSTRUCTION archetype to specify an order of oxygen, in an ACTION archetype to record performed oxygen therapy, or within OBSERVATION archetypes such as Blood gases or Respirations, as part of patient state, where knowledge of ambient oxygen status is critical to interpretation of the observation.\r\n\r\nThe SLOT 'Oxygen delivery detail' can be used to specify additional structured information on the oxygen delivery, for example humidification or assisted ventilation. This will be relevant when there is an OBSERVATION archetype at top level, where this archetype is nested, for example OBSERVATION.pulse_oximetry. In other use cases, where the oxygen delivery itself is the concept, for example an archetype about mechanical ventilation, this archetype will be useful to record the amount of oxygen the individual is receiving.\r\n\r\nAlso use in calculation of FiO₂/PaO₂ ratio, in addition to other algorithms in intensive care medicine, for example oxygen extraction ratio, etc.\r\n\r\nAtmospheric pressure is assumed to equivalent to sea-level pressure, unless otherwise specified.\r\n\r\nWhere not specifically recorded values of 21% O₂, FiO₂ of 0.21 and oxygen flow rate of zero may be assumed.\r\n\r\n'Inspired oxygen' implies the amount of oxygen that was ordered or actioned, and normally reported in clinical records e.g.' the patient is on 30% Oxygen' and is not intended to capture the actual 'physiological' amount of oxygen that the patient receives, which will vary depending on the delivery method and other external conditions, such as whether the individual is breathing shallowly or is frequently removing the nasal prongs.",
+          "misuse" : "Do not use for other inhaled gases such as nitrous oxide.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.inspired_oxygen.v1",
     "differential" : true,
@@ -28590,7 +28668,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "B80FC61F1D57F56A038D6FE9631F4BC5"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om overfølsomhetsreaksjoner.",
+          "keywords" : [ "kartlegging, spørreskjema, allergi, bivirkning, overfølsomhetsreaksjon, reaksjon, allergi, intoleranse" ],
+          "use" : "Bruk for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om tidligere overfølsomhetsreaksjoner.\r\n\r\nArketypen er løst modellert for å inkludere det bredeste spekteret av overfølsomhetsreaksjoner, som inkluderer men ikke er begrenset til allergier, overfølsomhet, intoleranser og bivirkninger som krever at man unngår kontakt med substansen. Substanser inkluderer, men er ikke begrenset til:\r\n- Terapeutiske substanser administrert korrekt i en passende dosering for individet.\r\n- Mat.\r\n- Materiale av plante- eller animalsk opprinnelse.\r\n- Gift fra insektstikk.\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematiserte spørsmål ved enhver konsultasjon, for eksempel:\r\n--- Er du allergisk mot penicillin? Ja, Nei, Ukjent, Usikker.\r\n--- Reagerer du på plaster? Ja, Nei, Ukjent, Usikker.\r\n--- Har du noen matintoleranser?\r\n--- Har du noen gang hatt allergi mot hunder?\r\n\r\nSemantikken i denne arketypen er med vilje løst definert, og spørringer etter data i denne arketypen vil normalt bare være hensiktsmessig eller sikkert i konteksten av det spesifikke templatet. I et templat vil hvert dataelement vanligvis døpes om til det (spesifikke) spørsmålet man ønsker svar på. Flere steder er det foreslått verdisett som passer til de vanligste bruksområder, men det er allikevel mulig å tilpasse/endre verdisett for lokal bruk ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN i stedet. \r\n\r\nBruk en separat instans av denne arketypen for å skille mellom spørsmål som registrerer informasjon om en overfølsomhetsreaksjon som har oppstått når som helst i fortiden og informasjon om en overfølsomhetsreaksjon som har oppstått innenfor et spesifisert tidsintervall - for eksempel forskjellen mellom \"Har du noen allergier?\" sammenlignet med \"Har du hatt noen overfølsomhetsreaksjoner på medikamenter de siste fire ukene?\"\r\n\r\nKilden til informasjonen i et spørreskjema kan variere i ulike kontekster, men kan identifiseres spesifikt ved å benytte \"Information provider\" elementet i openEHR-referansemodell.\r\n\r\nDenne arketypen er laget for å bli brukt i et spørreskjema eller for å registrere enkle strukturerte data til for eksempel et sykdomsregister. Dersom det i spørreskjemaet identifiseres at det er noen overfølsomhetsreaksjoner som bør lagres i den elektroniske journalen, utover et øyeblikksbilde, er det tenkt at dette skal lagres i persistente arketyper laget spesielt for detaljer om overfølsomhetsreaksjonen (som for eksempel datoen for klinisk anerkjennelse) ved bruk av EVALUATION.adverse_reaction_risk archetype eller CLUSTER.adverse_reaction_event.",
+          "misuse" : "Skal ikke brukes til å registrere tilstedeværelse eller fravær av overfølsomhetsreaksjoner utenfor kartleggingssammenheng. Bruk EVALUATION.adverse_reaction_risk, CLUSTER.adverse_reaction_event eller EVALUATION.exclusion_specific for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To create a framework for recording answers to pre-defined screening questions about adverse reactions.",
+          "keywords" : [ "Condition, state, illness, syndrome, questionnaire, screening, issue, allergy, intolerance" ],
+          "use" : "Use to create a framework for recording answers to pre-defined screening questions about past adverse reactions. \r\n\r\nThis archetype has deliberately been loosely modelled to be inclusive of the broadest range of adverse reactions, including but not limited to allergies, sensitivities, intolerances and side effects which warrant avoiding exposure to the identified substance. Substances include, but are not limited to: \r\n- Therapeutic substance administered correctly at an appropriate dosage for the individual.\r\n- Food.\r\n- Materials derived from plants or animals.\r\n- Venom from insect stings.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation, for example:\r\n--- Allergy to penicilin? Yes, No, Unknown, Unsure.\r\n--- Reaction to sticking plasters? Yes, No, Unknown, Unsure.\r\n--- Do you have any food intolerances?\r\n--- Have you ever had an allergy to dogs?\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nUse a separate instance of this archetype to distinguish between a questionnaire recording information about an adverse reaction that has occurred at any time in the past and information about an adverse reaction which occurred within a specified time interval - for example the difference between \"Do you have any allergies?\" compared to \"Have you had any reactions to any medications in the last four weeks?\"\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of an adverse reaction, it is recommended that clinical system record and persist the specific details about the adverse reaction (such as the date of clinical recognition) using the EVALUATION.adverse_reaction_risk archetype or the CLUSTER.adverse_reaction_event.",
+          "misuse" : "Not to be used to record details about the presence or absence of an adverse reaction, outside of a screening context. Use EVALUATION.adverse_reaction_risk, CLUSTER.adverse_reaction_event or EVALUATION.exclusion_specific for these purposes.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.adverse_reaction_screening.v1",
     "differential" : true,
@@ -28713,16 +28823,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "POINT_EVENT",
               "nodeId" : "at0002.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT_PROXY",
-                  "rmTypeName" : "ITEM_TREE",
-                  "occurrences" : "1..1",
-                  "targetPath" : "/data[at0001]/events[at0002.2]/data[at0003]"
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
