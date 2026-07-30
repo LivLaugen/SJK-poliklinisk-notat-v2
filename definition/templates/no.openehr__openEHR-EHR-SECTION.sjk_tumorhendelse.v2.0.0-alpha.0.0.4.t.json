@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "00d1d3ecd83d05994ae166cb78aaf03c",
+      "MD5-CAM-1.0.1" : "ab70ec1566da5922315796c3e6933995",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "11.0.0",
+      "sem_ver" : "12.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -518,141 +518,40 @@
             "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_BOOLEAN",
-              "nodeId" : "at0.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "nodeId" : "at0.2",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_MULTIMEDIA",
-              "nodeId" : "at0.3",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "nodeId" : "at0.4",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_COUNT",
-              "nodeId" : "at0.5",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "nodeId" : "at0.6",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE",
-              "nodeId" : "at0.7",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TIME",
-              "nodeId" : "at0.8",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DURATION",
-              "nodeId" : "at0.9",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_ORDINAL",
-              "nodeId" : "at0.10",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_SCALE",
-              "nodeId" : "at0.11",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_PROPORTION",
-              "nodeId" : "at0.12",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_URI",
-              "nodeId" : "at0.13",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "nodeId" : "at0.14",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
               "nodeId" : "at0.15",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_PARSABLE",
-              "nodeId" : "at0.16",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL",
-              "nodeId" : "at0.17",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL",
-              "nodeId" : "at0.18",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL",
-              "nodeId" : "at0.19",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL",
-              "nodeId" : "at0.20",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL",
-              "nodeId" : "at0.21",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL",
-              "nodeId" : "at0.22",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_URI",
-              "nodeId" : "at0.23",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "no.dips.Oncology.SpecifiedTumorEventType"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.dips.Oncology.SpecifiedTumorEventType" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "no.dips.Oncology.SpecifiedTumorEventType",
+                    "code" : "01Lokalt",
+                    "value" : "Lokalt"
+                  }, {
+                    "terminologyId" : "no.dips.Oncology.SpecifiedTumorEventType",
+                    "code" : "02Regionalt",
+                    "value" : "Regionalt"
+                  }, {
+                    "terminologyId" : "no.dips.Oncology.SpecifiedTumorEventType",
+                    "code" : "03Metastasert",
+                    "value" : "Metastasert"
+                  }, {
+                    "terminologyId" : "no.dips.Oncology.SpecifiedTumorEventType",
+                    "code" : "04Biokjemisk",
+                    "value" : "Biokjemisk"
+                  } ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -770,9 +669,9 @@
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
-            "text" : "Spesifisert hendelsestype",
+            "text" : "Lokalisasjon/type til tumorhendelse",
             "description" : "Den spesifikke hendelsestypen for sykdomsutviklingen.",
-            "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig."
+            "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig.\n\n80534008- Biochemical (qualifier value)"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
