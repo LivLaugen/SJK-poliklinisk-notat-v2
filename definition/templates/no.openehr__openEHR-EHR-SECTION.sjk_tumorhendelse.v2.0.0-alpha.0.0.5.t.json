@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "a6d0429405caae52f6b45f7d470e782b",
+      "MD5-CAM-1.0.1" : "f6257e18de89069531839baec4683602",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "16.0.0",
+      "sem_ver" : "17.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -574,6 +574,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0026.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -688,7 +689,7 @@
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
-            "text" : "Lokalisasjon/type til tumorhendelse",
+            "text" : "Klinisk oppfølgingsstatus",
             "description" : "Den spesifikke hendelsestypen for sykdomsutviklingen.",
             "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig.\n\n80534008- Biochemical (qualifier value)"
           },
@@ -3519,6 +3520,34 @@
             } ]
           } ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0010.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.137" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -3544,6 +3573,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.137" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.137",
             "description" : ""
           }
         },
@@ -3583,6 +3618,33 @@
             "text" : "*(Synthesized) (de)",
             "code" : "ac0.12",
             "description" : ""
+          },
+          "at0010" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010",
+            "text" : "Total vurdering av tumorstatus.",
+            "description" : "Total vurdering av sykdommen med hensyn til alle manifestasjoner.",
+            "comment" : "Designkommentar:\nDenne kan man bruke for hele kreftsykdommen, kanskje i stedet for sykdomsstatus. \nNED = "
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Tumorstatus",
+            "description" : "Statusen til en kreftsykdom i løpet av behandlingsforløpet eller etter behandling og oppfølging.",
+            "comment" : "Designkommentar:\nHer kan man vurdere å putte inn tumorstatus hvis man vil ha dette med per hendelsestype. \n\nEventuelt så kan man bruke denne i stedet for klinisk grunnlag på sykdomsstatus - den sier egentlig litt av det samme for både lokal, regional og fjernmetastase.  \n\n"
+          },
+          "at0010.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010.1",
+            "text" : "Total vurdering av tumorstatus.",
+            "description" : "Total vurdering av sykdommen med hensyn til alle manifestasjoner.",
+            "comment" : "D"
+          },
+          "ac0.137" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (de)",
+            "code" : "ac0.137",
+            "description" : ""
           }
         },
         "en" : {
@@ -3602,6 +3664,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (de)",
             "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.137" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (de)",
+            "code" : "ac0.137",
             "description" : ""
           }
         }
@@ -3668,6 +3736,631 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.12",
           "members" : [ "at0034", "at0035", "at0036", "at0037", "at0038", "at0039", "at0040" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.15",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.17" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.17",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.22" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.22",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.23" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.23",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.24" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.24",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.25",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.26" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.26",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.27" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.27",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.34",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.35" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.35",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.36" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.36",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.37" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.37",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.38" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.38",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.39",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.40",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.41",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.42",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.43",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.44",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.46" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.46",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.47" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.47",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.48" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.48",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.49" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.49",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.50" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.50",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.51" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.51",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.52" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.52",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.53" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.53",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.54" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.54",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.55" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.55",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.56" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.56",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.57" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.57",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.58" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.58",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.59" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.59",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.60" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.60",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.61" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.61",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.62" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.62",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.63" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.63",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.64" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.64",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.65" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.65",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.66" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.66",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.67" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.67",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.68" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.68",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.69" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.69",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.70" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.70",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.71" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.71",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.72" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.72",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.73" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.73",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.74" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.74",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.75" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.75",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.76" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.76",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.77" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.77",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.78" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.78",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.79" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.79",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.80" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.80",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.81" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.81",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.82" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.82",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.83" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.83",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.84" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.84",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.85" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.85",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.86" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.86",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.87" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.87",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.88" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.88",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.89" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.89",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.90" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.90",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.91" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.91",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.92" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.92",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.93" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.93",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.94" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.94",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.95" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.95",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.96" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.96",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.97" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.97",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.98" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.98",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.99" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.99",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.100" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.100",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.101" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.101",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.102" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.102",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.103" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.103",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.104" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.104",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.105" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.105",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.106" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.106",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.107" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.107",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.108" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.108",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.109" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.109",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.110" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.110",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.111" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.111",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.112" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.112",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.113" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.113",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.114" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.114",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.115" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.115",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.116" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.116",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.117" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.117",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.118" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.118",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.119" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.119",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.120" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.120",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.121" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.121",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.122" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.122",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.123" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.123",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.124" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.124",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.125" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.125",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.126" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.126",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.127" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.127",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.128" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.128",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.129" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.129",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.130" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.130",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.131" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.131",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.132" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.132",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.133" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.133",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.134" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.134",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.135" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.135",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.136" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.136",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
+        },
+        "ac0.137" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.137",
+          "members" : [ "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017", "at0018", "at0019" ]
         }
       }
     },
