@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "dc50616e9e24449d00e7326f71450e38",
+      "MD5-CAM-1.0.1" : "b09231c3911742a47fbcad68e07e68c9",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "21.0.0",
+      "sem_ver" : "22.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1686,8 +1686,8 @@
           },
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "Variant",
+            "code" : "at0079.1",
+            "text" : "Sykdomsforløp",
             "description" : "Spesifikk variant eller subtype av diagnose, hvis det er relevant.",
             "comment" : "Designkommentar:\nDenne brukes for å si om det er en primærtumor eller et residiv, eventuelt noe annet. \nDenne bør være obligatorisk for å få resten under riktig. "
           }
