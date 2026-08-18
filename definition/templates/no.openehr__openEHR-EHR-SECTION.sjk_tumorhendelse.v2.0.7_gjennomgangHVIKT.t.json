@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "a794fb042cd1522177efc29b8dee1d0f",
+      "MD5-CAM-1.0.1" : "4d75ef991f9718f93d03fc7b56bad398",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "24.1.0",
+      "sem_ver" : "24.1.1",
       "build_uid" : ""
     },
     "details" : {
@@ -684,7 +684,7 @@
             "code" : "at0005.1",
             "text" : "Sykdomsstatus",
             "description" : "Hva er sykdomsstatusen til sykdommen ved denne oppfølgingen?",
-            "comment" : "Designkommentar\nHer har vi laget oss et eget kodeverk for sykdomsstatus for pasienten ved denne oppfølgingen. \n\n\n\n\n"
+            "comment" : "Designkommentar\nHer har vi laget oss et eget kodeverk for sykdomsstatus for pasienten ved denne oppfølgingen. \n\nFHIR - https://hl7.org/fhir/R4/codesystem-condition-clinical.html#4.3.14.478.2\nTo nivåer\n- Aktiv - there is evidence of the condition.\n--- recurrence - repeating of a previously resolved condition, e.g. urinary tract infection, pancreatitis, cholangitis, conjunctivitis.\n--- relapse - signs and symptoms after a period of improvement or remission, e.g. relapse of cancer,\n- Inaktiv - The subject is no longer experiencing the symptoms of the condition or there is no longer evidence of the condition.\n--- remission - The subject is no longer experiencing the symptoms of the condition, but there is a risk of the symptoms returning.\n--- resolved -  The subject is no longer experiencing the symptoms of the condition and there is a negligible perceived risk of the symptoms returning\n\n1251564008\t Relapsing malignant neoplastic disease (disorder) \n1373027001\t Malignant neoplasm in remission (disorder) \n73425007\t Inactive (qualifier value) \n73425007\t Inactive (qualifier value) \n723506003\t Resolved (qualifier value) \n277022003\t Remission phase (qualifier value) \n103338009\tin full remission (qualifier value) \n103337004\t In partial remission (qualifier value) \n263855007\t Relapse phase (qualifier value) \n278178002 \tTransformed phase (qualifier value)\n263855007\t Relapse phase (qualifier value)\n277022003\t Remission phase (qualifier value)\n278178002\t Transformed phase (qualifier value)\n878806005  Second primary cancer (disorder) (barn av Primary malignant neoplasm, Pasienten har utviklet to uavhengige kreftsykdommer.\n\n\n268910001\tPatient's condition improved (finding)\n359746009\tPatient's condition stable (finding)\n271299001\tPatient's condition worsened (finding)\n709137006\tPatient condition undetermined (finding)\n\n\n\n"
           }
         },
         "de" : {
