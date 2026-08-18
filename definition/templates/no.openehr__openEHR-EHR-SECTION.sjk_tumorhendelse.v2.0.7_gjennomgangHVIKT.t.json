@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2eb1eed4e57081180910eb0b1d15d704",
+      "MD5-CAM-1.0.1" : "a794fb042cd1522177efc29b8dee1d0f",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "24.0.0",
+      "sem_ver" : "24.1.0",
       "build_uid" : ""
     },
     "details" : {
@@ -81,7 +81,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "For å beskrive en sykdomsutvikling (tumor-event) / tilbakefallstype ved oppfølging av en kreftdiagnose. ",
+        "purpose" : "For å beskrive en sykdomsutvikling (tumor-event) / tilbakefallstype ved oppfølging av en kreftdiagnose. \n\nGENERELLE TILBAKEMELINGER FRA HVIKT:\n1. Hvor mye bakgrunnsinformasjon trengs i tumorhendelsestemplatet.\n   - Hvorfor trenger man verdisettet primærtumor/residiv annet?\n   - Trenger man lokalisasjon registrert strukturert?\n",
         "keywords" : [ "Tumor-event, tilbakefall, hendelsestype, biokjemisk, metastasert, residivert, progresjon" ],
         "use" : "\nBrukses for å beskrive en sykdomsutvikling/tilbakefallstype/tumorhendelse ved oppfølgig av en kreftdiagnose. \nDet er lagt inn et kartleggingsspørsmål om det har skjedd en sykdomsutvikling/tumor-event. \n\nDeretter kan man dokumentere om det er en progresjon, dvs. en forverring av diagnosen eller om den er residivert. \nVidere sier man noe om denne sykdomsutviklingen er lokalisert - lokalt, regionalt, metastasert og/eller biokjemisk. Det er mulig å velge flere alternativer. \n\nDet er tatt med mulighet for å si noe om påvisningsmetoden for sykdomsutviklingen. ",
         "originalResourceUri" : { },
@@ -912,7 +912,7 @@
             "code" : "at0001.1",
             "text" : "Diagnose ICD-10",
             "description" : "Koding av diagnosen med ICD10.",
-            "comment" : "Designkommentar:\nDet er denne verdien som skal vises i skjermbildet. \nDen trenger nå ikke å være obligatorisk. \nKodes med ICD-10.\nHentes hvis det er registrert i \"onkologisk sykehistorie\" ellers må den søkes opp. "
+            "comment" : "Innspill fra HVIKT:\nHva blir riktig i denne use casen? Skal man registrere ICD 10 kode for den opprinnelige sykdommen, eller skal dette spesifiseres ytterligere med f.eks, en metastase/residiv kode? \nUklart om det er behov for en Morfologisk diagnose, ev. hvor bør denne gå inn?\n\nDesignkommentar:\nDet er denne verdien som skal vises i skjermbildet. \nDen trenger nå ikke å være obligatorisk. \nKodes med ICD-10.\nHentes hvis det er registrert i \"onkologisk sykehistorie\" ellers må den søkes opp. "
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1229,7 +1229,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
+              "occurrences" : "0..0",
               "nodeId" : "at0079.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1656,7 +1656,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0012.1",
             "text" : "Lokalisasjon for residiv",
-            "description" : "Registrering av det anatomisk stedet der diagnosen er lokalisert.",
+            "description" : "INNSPILL HVIKT:\nEr dette relevant i sammenheng med tumorhendelse? Duplisering av informasjon?\n\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.",
             "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet \n\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nFor brystkreft, når det er snakk om en overordnet diagnosekode (den verste) må denne stå som mamma. \n76752008 -  mamma (Breast structure (body structure))"
           },
           "at0003.1" : {
@@ -1669,9 +1669,9 @@
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079.1",
-            "text" : "Sykdomsforløp",
+            "text" : "HVIKTSykdomsforløp",
             "description" : "Spesifikk variant eller subtype av diagnose, hvis det er relevant.",
-            "comment" : "Designkommentar:\nDenne brukes for å si om det er en primærtumor eller et residiv, eventuelt noe annet. \nDenne bør være obligatorisk for å få resten under riktig. "
+            "comment" : "Innspill fra HVIKT:\nDenne modelleringen er ulik modellering i eksempelvis sarkom. Her har man benyttet karleggingsarketype, med kopiering av data til problem/diagnose kvalifikator arketypen.\n\nDesignkommentar:\nDenne brukes for å si om det er en primærtumor eller et residiv, eventuelt noe annet. \nDenne bør være obligatorisk for å få resten under riktig. "
           }
         },
         "sv" : {
