@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "112478b186decaab723cee0c3a7df73a",
+      "MD5-CAM-1.0.1" : "384d7dd36f5904041044fadcdde0bd10",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "24.0.0",
+      "sem_ver" : "25.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -522,7 +522,10 @@
                   }, {
                     "terminologyId" : "no.onk.sykdomsstatus",
                     "code" : "3",
-                    "value" : "Sykdomsprogresjon"
+                    "value" : "Sykdomsprogresjon",
+                    "translations" : {
+                      "nb" : "Sykdomsprogresjon (progresjon)"
+                    }
                   }, {
                     "terminologyId" : "no.onk.sykdomsstatus",
                     "code" : "4",
