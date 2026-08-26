@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "637fd6231939dbf95152cf9db0b7c4af",
-      "PARENT:MD5-CAM-1.0.1" : "8c97679af88e8f1711add100deb350b4"
+      "MD5-CAM-1.0.1" : "2b1ce0b2fe33ce9f713456d5eece02d8",
+      "PARENT:MD5-CAM-1.0.1" : "8c97679af88e8f1711add100deb350b4",
+      "sem_ver" : "0.1.0",
+      "build_uid" : ""
     },
     "details" : {
       "nb" : {
@@ -31,6 +33,7 @@
           },
           "codeString" : "nb"
         },
+        "purpose" : "For gjenbruk av siste tumorhendelse i poliklinisk notat.",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
@@ -41,7 +44,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-CLUSTER.tumorhendelse dips (2).v1"
+    "value" : "openEHR-EHR-CLUSTER.tumorhendelse_dips_(2).v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -125,7 +128,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "644485ea-20a3-379b-81c3-785d36d53315",
+  "buildUid" : "50a96d4e-9961-364d-b353-cd0e4af1fe01",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
