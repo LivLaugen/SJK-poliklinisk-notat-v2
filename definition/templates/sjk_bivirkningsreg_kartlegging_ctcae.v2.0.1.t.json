@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "06b70cba4e3e4c5bdb36c51f9b6f11ae",
-      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
+      "MD5-CAM-1.0.1" : "77a8185c2dd8c511073325f0caa7c57e",
+      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
+      "sem_ver" : "1.0.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -935,7 +937,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Bivirkninger av behandling",
+            "text" : "Bivirkninger av behandling (alt1)",
             "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
             "comment" : "The answers may be self-reported."
           },
@@ -1008,7 +1010,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Bivirkninger under eller etter behandling",
+            "text" : "Bivirkninger under eller etter behandling (org)",
             "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser.",
             "comment" : "Svarene kan være selvrapporterte."
           },
@@ -3340,7 +3342,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Kartlegging bivirkninger",
+            "text" : "Kartlegging bivirkninger (bedre alt?)",
             "description" : "- Baseline-registrering: Gjennomføres før behandlingsstart for å kartlegge eventuelle symptomer eller andre uønskede forhold som allerede foreligger, og som kan være relevante å følge videre.\n- Under/etter behandling: Gjennomføres gjentatte ganger under og etter behandling for å fange opp nye eller forverrede symptomer eller bivirkninger.",
             "comment" : "Svarene kan være pasientregistrerte.\r\n"
           },
@@ -5796,7 +5798,7 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "Overordnet merknad",
+            "text" : "Overordnet merknad om bivirkninger",
             "description" : "Benyttes ved behov for tilleggsopplysninger eller utdypende kommentarer til registrerte symptomer eller uønskede hendelser."
           },
           "at0002.1" : {
