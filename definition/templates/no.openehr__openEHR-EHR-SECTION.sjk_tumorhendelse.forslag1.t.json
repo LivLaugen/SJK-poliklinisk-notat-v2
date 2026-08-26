@@ -81,7 +81,7 @@
           },
           "codeString" : "nb"
         },
-        "purpose" : "For å beskrive en sykdomsutvikling (tumor-event) / tilbakefallstype ved oppfølging av en kreftdiagnose. ",
+        "purpose" : "For å beskrive en sykdomsutvikling (tumor-event) / tilbakefallstype ved oppfølging av en kreftdiagnose. \n\n- FORSLAG 1- ",
         "keywords" : [ "Tumor-event, tilbakefall, hendelsestype, biokjemisk, metastasert, residivert, progresjon" ],
         "use" : "\nBrukses for å beskrive en sykdomsutvikling/tilbakefallstype/tumorhendelse ved oppfølgig av en kreftdiagnose. \nDet er lagt inn et kartleggingsspørsmål om det har skjedd en sykdomsutvikling/tumor-event. \n\nDeretter kan man dokumentere om det er en progresjon, dvs. en forverring av diagnosen eller om den er residivert. \nVidere sier man noe om denne sykdomsutviklingen er lokalisert - lokalt, regionalt, metastasert og/eller biokjemisk. Det er mulig å velge flere alternativer. \n\nDet er tatt med mulighet for å si noe om påvisningsmetoden for sykdomsutviklingen. ",
         "originalResourceUri" : { },
