@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "77a8185c2dd8c511073325f0caa7c57e",
+      "MD5-CAM-1.0.1" : "8aed21be5c1c2d416274154766f866de",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "1.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -5818,7 +5818,7 @@
           "at0004.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.2",
-            "text" : "Overordnet merknad",
+            "text" : "Overordnet merknad om bivirkninger",
             "description" : "Benyttes ved behov for tilleggsopplysninger eller utdypende kommentarer til registrerte symptomer eller uønskede hendelser."
           }
         },
