@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "cba2731140ed0e3c8745744d584e27ae",
+      "MD5-CAM-1.0.1" : "e03277b67bfaaa8c7dc8c74a48904c9a",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.2.0",
+      "sem_ver" : "1.3.0",
       "build_uid" : ""
     },
     "details" : {
@@ -260,7 +260,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "sjk_bivirkningsreg_kartlegging_ctcae.v2.0.1",
+          "text" : "sjk_bivirkningsreg_kartlegging_ctcae",
           "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         }
       },
@@ -1043,14 +1043,14 @@
           "at0028.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0028.1",
-            "text" : "Foreligger det symptomer eller bivirkninger ved behandlingsstart (basline)?",
+            "text" : "Foreligger det symptomer eller bivirkninger ved behandlingsstart (baseline)?",
             "description" : "Baseline-registrering: Utføres før behandlingsstart for å dokumentere eksisterende symptomer eller bivirkninger.",
             "comment" : "Designkommentar:\n*Before procedure (qualifier value)\tBefore - 307153007\n *During procedure (qualifier value)\t- 307154001\n*Postprocedural period (qualifier value)\t- 303110006"
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
-            "text" : "Basline",
+            "text" : "Baseline",
             "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
           },
           "at0025.2" : {
@@ -3355,7 +3355,7 @@
           "at0002.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.2",
-            "text" : "Basline",
+            "text" : "Baseline",
             "description" : "Baseline-registrering: Gjennomføres før behandlingsstart for å kartlegge eventuelle symptomer eller andre uønskede forhold som allerede foreligger, og som kan være relevante å følge videre."
           },
           "at0028.2" : {
@@ -5804,7 +5804,7 @@
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
-            "text" : "Basline",
+            "text" : "Baseline",
             "description" : "Eksisterende symptomer eller uønskede hendelser før behandlingsstart.",
             "comment" : "Designkommentar:\nhttps://openehr.atlassian.net/wiki/spaces/KLIM/pages/3332243463/Bruk+av+arketypen+CTCAE?ct=1785162403020\nBeslutning etter diskusjon: \nbenytte Anamnese arketypen, med instans av CTCAE, bruker uspesifisert hendelse med disse to eventene: Baseline Event og Under behandlingsevent"
           },
@@ -7014,7 +7014,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Subjektiv hørselstap",
+            "text" : "Subjektivt hørselstap",
             "description" : "Rapportert observasjon av fysiske tegn eller beskrivelse av unormale eller ubehagelige fornemmelser i kropp og/eller sinn.",
             "comment" : "Designkommentar:\nDenne strukturen kan man gjenta hvis man har andre bivirkninger/problemer som man vil registrere som ikke dekkes av CTCAE. "
           },
@@ -8139,7 +8139,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Subjektiv hørselstap",
+            "text" : "Subjektivt hørselstap",
             "description" : "Rapportert observasjon av fysiske tegn eller beskrivelse av unormale eller ubehagelige fornemmelser i kropp og/eller sinn.",
             "comment" : "Designkommentar:\nDenne strukturen kan man gjenta hvis man har andre bivirkninger/problemer som man vil registrere. Denne kopierer det som ligger i kartleggingsspørrsmålet for å få det inn i riktig arketype. "
           },
