@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "6213d69aeaccaae0caea64f52f1066a9",
+      "MD5-CAM-1.0.1" : "d98242dc54f9340182b2eb6142455ad2",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
-      "sem_ver" : "55.0.0",
+      "sem_ver" : "56.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -16890,10 +16890,6 @@
                               "constraint" : [ ],
                               "selectedTerminologies" : [ "no.onk.komplikasjoner" ],
                               "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "no.onk.komplikasjoner",
-                                "code" : "1",
-                                "value" : "Basline"
-                              }, {
                                 "terminologyId" : "no.onk.komplikasjoner",
                                 "code" : "2",
                                 "value" : "Under behandling"
