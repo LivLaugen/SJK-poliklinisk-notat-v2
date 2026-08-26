@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "9ae8577a1f66db85f72194bdb54d109c",
+      "MD5-CAM-1.0.1" : "32135449c4af21c544d10992280d1f8a",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
-      "sem_ver" : "56.1.0",
+      "sem_ver" : "56.1.1",
       "build_uid" : ""
     },
     "details" : {
@@ -25126,7 +25126,7 @@
           "at0002.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.2",
-            "text" : "Basline",
+            "text" : "Baseline",
             "description" : "Baseline-registrering: Gjennomføres før behandlingsstart for å kartlegge eventuelle symptomer eller andre uønskede forhold som allerede foreligger, og som kan være relevante å følge videre."
           },
           "at0028.2" : {
@@ -29840,7 +29840,7 @@
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
-            "text" : "Basline",
+            "text" : "Baseline",
             "description" : "Eksisterende symptomer eller uønskede hendelser før behandlingsstart.",
             "comment" : "Designkommentar:\nhttps://openehr.atlassian.net/wiki/spaces/KLIM/pages/3332243463/Bruk+av+arketypen+CTCAE?ct=1785162403020\nBeslutning etter diskusjon: \nbenytte Anamnese arketypen, med instans av CTCAE, bruker uspesifisert hendelse med disse to eventene: Baseline Event og Under behandlingsevent"
           },
