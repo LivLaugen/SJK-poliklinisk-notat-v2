@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "cfb1303013c1dcf038107e8d19dc8379",
+      "MD5-CAM-1.0.1" : "885be4bfa91b1b6cc8b114ed991889bf",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "27.0.0",
+      "sem_ver" : "28.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -2437,7 +2437,59 @@
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
                           "nodeId" : "at0004.2",
-                          "attributes" : [ ],
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "no.onk_sykdomsstatus"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "no.onk_sykdomsstatus" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "1",
+                                    "value" : "Ingen tegn til sykdom (NED)"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "2",
+                                    "value" : "Stabil sykdom"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "3",
+                                    "value" : "Sykdomsprogresjon"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "4",
+                                    "value" : "Tilbakefall (residiv)"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "5",
+                                    "value" : "Transformasjon"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "6",
+                                    "value" : "Ny primær kreftsykdom"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "7",
+                                    "value" : "Annet"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ ]
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
