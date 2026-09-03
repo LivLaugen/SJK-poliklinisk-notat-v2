@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5e0538b213130c68b6c72f06ce83378e",
+      "MD5-CAM-1.0.1" : "233e892311e7da0b226e79b8b3c7d93e",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "22.0.0",
+      "sem_ver" : "23.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -695,6 +695,13 @@
             "text" : "Hendelsestidspunkt",
             "description" : "Dato/tid for sykdomsutviklingen/tumor-eventet.",
             "comment" : "Designkommentar:\nDato/tid for sykdomsutviklingen/tumor-event/forverringen. Denne kan man hente fra kartleggingsarketypen brukt for å få bekrefte om det skjedd en progresjon (forverring) eller om det er residivert. "
+          },
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.2",
+            "text" : "Metode",
+            "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funnet.",
+            "comment" : "Designkommentar:\nDette kalles ofte for Basis of episode - metode for å slå fast at man har en episode. \n\nBenytter samme hierarki som ENCRs anbefalinger for diagnosegrunnlag. Det høyeste tilgjengelige diagnosegrunnlaget skal registreres. Dette er ikke nødvendigvis det samme som undersøkelsen som først påviste residiv, progresjon eller transformasjon\n\n\nKun dødsattest (DCO)\n Opplysninger om diagnosen er kun hentet fra dødsattest.\n\n-Klinisk\n Diagnose stilt på klinisk grunnlag uten støtte fra undersøkelsene nedenfor.\n-Klinisk undersøkelse\n Diagnose basert på undersøkelser som bildediagnostikk, endoskopi, ultralyd eller kirurgisk eksplorasjon, uten vevsprøve.\n-Tumormarkører\n Diagnose basert på tumorspesifikke biokjemiske eller immunologiske markører.\n-Cytologi\n Mikroskopisk undersøkelse av celler eller celleprøver. Omfatter også flytende biopsi, det vil si analyse av blod eller annen kroppsvæske for påvisning av kreftceller eller tumoravledet DNA.\n-Histologi\n Mikroskopisk undersøkelse av vevsprøve fra primærsvulst eller metastase.\n-Cytogenetisk og/eller molekylær analyse\n Påvisning av tumorspesifikke genetiske eller molekylære forandringer.\n-Ukjent\n Diagnosegrunnlaget er ukjent.\n\n"
           }
         },
         "de" : {
@@ -1329,6 +1336,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0003.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1384,6 +1392,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0072.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
