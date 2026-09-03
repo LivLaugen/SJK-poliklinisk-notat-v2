@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "275e21e57549941edeafe95cbd98c58c",
+      "MD5-CAM-1.0.1" : "d6319c5ae9731e671eb25f62763f8726",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "16.0.0",
+      "sem_ver" : "17.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1367,9 +1367,60 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0072.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "1",
+                        "value" : "Ingen tegn til sykdom (NED) --> 1373027001,  Malignant neoplasm in remission (disorder), eller 277022003 | Remission phase (qualifier value)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "2",
+                        "value" : "Stabil sykdom ->    58158008 Stable (qualifier value) eller    359746009 Patient's condition stable (finding)  eller  359748005 Patient condition unchanged (finding)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "3",
+                        "value" : "Sykdomsprogresjon - ->   1371415000 Malignant neoplastic disease progression (finding),   271299001 Patient's condition worsened (finding)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "4",
+                        "value" : "Tilbakefall (residiv) -->  1251564008 Relapsing malignant neoplastic disease eller 255227004 | Recurrent (qualifier value)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "5",
+                        "value" : "Transformasjon -> 278178002 Transformed phase (qualifier value)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "6",
+                        "value" : "Ny primær kreft -> 878806005 Second primary cancer (disorder)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "7",
+                        "value" : "Annet -> 74964007 Other (qualifier value)"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -1680,6 +1731,13 @@
             "text" : "Dato/tid for klinisk bekreftelse",
             "description" : "Anslått eller faktisk dato/tid da diagnosen ble bekreftet:\n1. prøvetakningsdato for første positiv histologi/cytologi \n2. Mottaksdato så svardato for patologiprøve. \n3. Andre undersøkelser som bildediagnostikk, blodprøve etc. hvor man bestemmer seg for at pasienten har\nkreft.",
             "comment" : "Delvise datoer er tillatt. Dersom individet er under ett år gammel, må komplett dato eller som et minimum måned og år oppgis for å muliggjøre presise beregninger av alder, f.eks. ved bruk i beslutningsstøttesystemer. Data registrert eller importert som \"alder ved tidspunkt når diagnosen stilles\" bør konverteres til en dato ved hjelp av individets fødselsdato."
+          },
+          "at0072.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0072.1",
+            "text" : "Sykdomsutvikling",
+            "description" : "Fritekstbeskrivelse av forløpet av problemet eller diagnosen siden debut.",
+            "comment" : "Designkommentar:\nMan kunne kansje brukt denne for sykdomsutvikling. "
           }
         },
         "sv" : {
@@ -2543,7 +2601,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0005.2",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -2558,10 +2615,7 @@
                                   "@type" : "C_TERMINOLOGY_CODE",
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.88" ],
+                                  "constraint" : [ "ac0.102" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -2578,27 +2632,7 @@
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
                               "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
@@ -2651,6 +2685,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.91",
+            "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.102",
             "description" : ""
           }
         },
@@ -2706,7 +2746,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
             "text" : "Sykdomsstatus",
-            "description" : ""
+            "description" : "",
+            "comment" : "1 Ingen tegn til sykdom (NED) ->  \n  1373027001 | Malignant neoplasm in remission (disorder) | \n  103338009 | In full remission (qualifier value) | \n  277022003 | Remission phase (qualifier value) | \nNED ikke nødvendigvis betyr kurert eller varig sykdomsfri. \n\n2 Stabil sykdom ->  \n  58158008 Stable (qualifier value) eller  \n  359746009 Patient's condition stable (finding) \n  359748005 Patient condition unchanged (finding) \n-stable er kanskje best fordi kodeverkverdien er selve sykdomsstatusen \"Stabil sykdom\". \n\n 3 Sykdomsprogresjon - ->  \n  1371415000 Malignant neoplastic disease progression (finding),  \n  271299001 Patient's condition worsened (finding) \n  246450006 Progression (attribute) ( dårlig alternativ fordi det er et modelleringsattributt i SNOMED.) \n\n4 Tilbakefall (residiv) -->  \n   1251564008 Relapsing malignant neoplastic disease eller  \n   255227004 | Recurrent (qualifier value) \n\n5 Transformasjon -->  \n    278178002 Transformed phase \n\n6 Ny primær kreftsykdom -->  \n   878806005 Second primary cancer \n\n7 Annet -->  \n   74964007 Other ((qualifier value) "
           },
           "at0004.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -2717,10 +2758,10 @@
           },
           "at0005.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
+            "code" : "at0005.2",
             "text" : "Tilstede?",
-            "description" : "",
-            "comment" : "Settes automatisk til \"Ja\" ved valg av tumorhendelse."
+            "comment" : "Settes automatisk til \"Ja\" ved valg av tumorhendelse.",
+            "description" : ""
           },
           "at0040.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -2733,6 +2774,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.91",
+            "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.102",
             "description" : ""
           }
         },
@@ -2748,6 +2795,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.91",
             "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.102",
+            "description" : ""
           }
         },
         "nl" : {
@@ -2761,6 +2814,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.91",
+            "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.102",
             "description" : ""
           }
         },
@@ -2776,6 +2835,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.91",
             "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.102",
+            "description" : ""
           }
         },
         "fr" : {
@@ -2790,6 +2855,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.91",
             "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.102",
+            "description" : ""
           }
         },
         "es" : {
@@ -2803,6 +2874,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.91",
+            "description" : ""
+          },
+          "ac0.102" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.102",
             "description" : ""
           }
         }
@@ -3258,6 +3335,56 @@
         "ac0.91" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.91",
+          "members" : [ "at0023" ]
+        },
+        "ac0.92" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.92",
+          "members" : [ "at0023" ]
+        },
+        "ac0.93" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.93",
+          "members" : [ "at0023" ]
+        },
+        "ac0.94" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.94",
+          "members" : [ "at0023" ]
+        },
+        "ac0.95" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.95",
+          "members" : [ "at0023" ]
+        },
+        "ac0.97" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.97",
+          "members" : [ "at0023" ]
+        },
+        "ac0.98" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.98",
+          "members" : [ ]
+        },
+        "ac0.99" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.99",
+          "members" : [ ]
+        },
+        "ac0.100" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.100",
+          "members" : [ "at0023", "at0024", "at0027", "at0045", "ac0.96" ]
+        },
+        "ac0.101" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.101",
+          "members" : [ "at0023" ]
+        },
+        "ac0.102" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.102",
           "members" : [ "at0023" ]
         }
       }
