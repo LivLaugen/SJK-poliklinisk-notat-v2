@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8cfe7e8258a4c937e76b90dc448ca253",
+      "MD5-CAM-1.0.1" : "da86da18e356d6fd39004d5fc63e5d00",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "24.0.0",
+      "sem_ver" : "25.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -2531,6 +2531,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
                           "nodeId" : "at0040.2",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -2546,7 +2547,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0025.2",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
@@ -2648,6 +2648,12 @@
             "text" : "Dato for kontakt",
             "description" : "Tidsangivelsen for bekymringen, plagen, problemet eller diagnosen.",
             "comment" : "Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bekymringen, plagen, problemet eller diagnosen i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Bekymringen, plagen, problemet eller diagnosen faktiske dato og/eller klokkeslett, start- og slutttid for bekymringen, plagen, problemet eller diagnosen, et tidsintervall for når bekymringen, plagen, problemet eller diagnosen oppstod, varigheten av bekymringen, plagen, problemet eller diagnosen, individets alder på tidspunktet for bekymringen, plagen, problemet eller diagnosen, eller hvor lenge det siden det oppstod. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
+          },
+          "at0025.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025.2",
+            "text" : "Kommentar/annet",
+            "description" : "Ytterligere fritekst om det spesifikke problem- eller diagnosespørsmålet som ikke er omfattet av andre felt."
           },
           "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
