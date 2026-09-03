@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "233e892311e7da0b226e79b8b3c7d93e",
+      "MD5-CAM-1.0.1" : "8cfe7e8258a4c937e76b90dc448ca253",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "23.0.0",
+      "sem_ver" : "24.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -567,7 +567,16 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0026.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -679,8 +688,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
             "text" : "Lokalisasjon/type til tumorhendelse",
-            "description" : "Den spesifikke hendelsestypen for sykdomsutviklingen.",
-            "comment" : "Designkommentar:\nAlternativ koding. \n\n80534008- Biochemical (qualifier value)\n259672007 Biochemical tumor marker (substance)\n\n399409002  Distant metastasis present (finding)\n396787000  Tumor metastasis to non-regional lymph nodes present (finding)\n399374009  Regional lymph node metastasis present (finding)\n372288004  Local tumor invasion (finding)\n\nhttps://encr.eu/sites/default/files/Recommendations/ENCR_Recording-Recurrence-Progression-Transformation_EN_Feb2025.pdf:\n• Local: This is the immediate area surrounding the primary tumour determined by the T-Category of the most recent recommended ENCR staging guidelines.  \n• Regional. This is determined by the regional lymph node classification identified as the N-Category of the most recent recommended ENCR staging guidelines.  \n• Distant This is determined by the M-category of the most recent recommended ENCR staging guidelines. \n"
+            "description" : "Lokalisasjon av sykdomshendelsen.\n-Lokalt – Sykdom begrenset til området rundt primærtumoren.\n-Regionalt – Sykdom med regional spredning til lymfeknuter eller nærliggende strukturer.\n-Metastasert – Sykdom med spredning til fjerne organer eller vev\n-Biokjemisk – Sykdomshendelse påvist ved tumormarkører",
+            "comment" : "Designkommentar:\nhttps://encr.eu/sites/default/files/Recommendations/ENCR_Recording-Recurrence-Progression-Transformation_EN_Feb2025.pdf:\nDisease Episode Location - \n--Lokalt -  Sykdom i området rundt primærtumoren, definert av T-kategorien i gjeldende ENCR-stadieinndeling.\n--Regionalt - Sykdom med regional spredning, definert av N-kategorien (regionale lymfeknuter) i gjeldende ENCR-stadieinndeling.\n--Metastasert) -  Sykdom med fjernspredning, definert av M-kategorien i gjeldende ENCR-stadieinndeling.\n\nAlternativ koding. \n80534008- Biochemical (qualifier value)\n259672007 Biochemical tumor marker (substance)\n399409002  Distant metastasis present (finding)\n396787000  Tumor metastasis to non-regional lymph nodes present (finding)\n399374009  Regional lymph node metastasis present (finding)\n372288004  Local tumor invasion (finding)\n\nhttps://encr.eu/sites/default/files/Recommendations/ENCR_Recording-Recurrence-Progression-Transformation_EN_Feb2025.pdf:\n\n"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -694,7 +703,7 @@
             "code" : "at0026.1",
             "text" : "Hendelsestidspunkt",
             "description" : "Dato/tid for sykdomsutviklingen/tumor-eventet.",
-            "comment" : "Designkommentar:\nDato/tid for sykdomsutviklingen/tumor-event/forverringen. Denne kan man hente fra kartleggingsarketypen brukt for å få bekrefte om det skjedd en progresjon (forverring) eller om det er residivert. "
+            "comment" : "Designkommentar:\nDato/tid for sykdomsutviklingen/tumor-event/forverringen. Denne kan man hente fra kartleggingsarketypen brukt for å få bekrefte om det skjedd en progresjon (forverring) eller om det er residivert. \n\nDate of Disease Episode \nDefineres som den første datoen i journal eller patologisvar hvor residiv, progresjon eller transformasjon ble diagnostisert, uavhengig av hvilken diagnostisk metode som ble benyttet for å stille diagnosen."
           },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -16733,6 +16742,12 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0065.1",
           "attributes" : [ ],
@@ -16863,6 +16878,12 @@
           }
         },
         "nb" : {
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Navn på kroppssted",
+            "description" : "Navngi kroppsstedet man har funnet metastaser."
+          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
@@ -16880,6 +16901,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Navn på kroppssted",
+            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen."
           }
         },
         "pt-br" : {
