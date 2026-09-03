@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "885be4bfa91b1b6cc8b114ed991889bf",
+      "MD5-CAM-1.0.1" : "140c2e96a82997619de9b7e71337fa6a",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "28.0.0",
+      "sem_ver" : "29.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -640,7 +640,7 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
+          "occurrences" : "0..*",
           "nodeId" : "at0024.1",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -687,8 +687,8 @@
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
-            "text" : "Lokalisasjon/type til tumorhendelse",
-            "description" : "Lokalisasjon av sykdomshendelsen.\n-Lokalt – Sykdom begrenset til området rundt primærtumoren.\n-Regionalt – Sykdom med regional spredning til lymfeknuter eller nærliggende strukturer.\n-Metastasert – Sykdom med spredning til fjerne organer eller vev\n-Biokjemisk – Sykdomshendelse påvist ved tumormarkører",
+            "text" : "Lokalisasjon av sykdomshendele/tumorevent",
+            "description" : "Lokalisasjon av sykdomshendelsen.\n-Lokalt – Sykdom begrenset til området rundt primærtumoren.\n-Regionalt – Sykdom med regional spredning til lymfeknuter eller nærliggende strukturer.\n-Metastasert – Sykdom med spredning til fjerne organer eller vev\n-Biokjemisk  – Sykdomshendelse påvist ved tumormarkører uten påvist lokal, regional eller fjernspredt sykdom.",
             "comment" : "Designkommentar:\nhttps://encr.eu/sites/default/files/Recommendations/ENCR_Recording-Recurrence-Progression-Transformation_EN_Feb2025.pdf:\nDisease Episode Location - \n--Lokalt -  Sykdom i området rundt primærtumoren, definert av T-kategorien i gjeldende ENCR-stadieinndeling.\n--Regionalt - Sykdom med regional spredning, definert av N-kategorien (regionale lymfeknuter) i gjeldende ENCR-stadieinndeling.\n--Metastasert) -  Sykdom med fjernspredning, definert av M-kategorien i gjeldende ENCR-stadieinndeling.\n\nAlternativ koding. \n80534008- Biochemical (qualifier value)\n259672007 Biochemical tumor marker (substance)\n399409002  Distant metastasis present (finding)\n396787000  Tumor metastasis to non-regional lymph nodes present (finding)\n399374009  Regional lymph node metastasis present (finding)\n372288004  Local tumor invasion (finding)\n\nhttps://encr.eu/sites/default/files/Recommendations/ENCR_Recording-Recurrence-Progression-Transformation_EN_Feb2025.pdf:\n\n"
           },
           "at0001.1" : {
