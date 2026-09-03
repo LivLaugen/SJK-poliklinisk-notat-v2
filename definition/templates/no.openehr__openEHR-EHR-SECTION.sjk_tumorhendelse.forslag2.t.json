@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "cece577d94e08c651765d246f4eece9d",
+      "MD5-CAM-1.0.1" : "7f9e78c8ad5b6f39bb8311b5ca022f28",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "18.0.0",
+      "sem_ver" : "19.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -671,7 +671,7 @@
             "code" : "at0003.1",
             "text" : "Lokalisasjon/type til tumorhendelse",
             "description" : "Den spesifikke hendelsestypen for sykdomsutviklingen.",
-            "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig.\n\n80534008- Biochemical (qualifier value)"
+            "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig.\n\n80534008- Biochemical (qualifier value)\n259672007 Biochemical tumor marker (substance)\n\n399409002  Distant metastasis present (finding)\n396787000  Tumor metastasis to non-regional lymph nodes present (finding)\n\n399374009 | Regional lymph node metastasis present (finding) |\n  en   Regional lymph node metastasis present (finding)\n"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
