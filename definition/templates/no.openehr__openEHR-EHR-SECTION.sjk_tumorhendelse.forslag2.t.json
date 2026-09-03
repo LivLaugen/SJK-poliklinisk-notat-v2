@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5580f6a747ed9440be39479d60d2dd89",
+      "MD5-CAM-1.0.1" : "5e0538b213130c68b6c72f06ce83378e",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "21.0.0",
+      "sem_ver" : "22.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -628,6 +628,15 @@
           "nodeId" : "at0023.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..1",
+          "nodeId" : "at0024.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-001.v1",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -1320,9 +1329,17 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0003.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -1728,7 +1745,7 @@
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003.1",
-            "text" : "Dato/tid for klinisk bekreftelse",
+            "text" : "Dato/tid for sykdomsutviklingen",
             "description" : "Anslått eller faktisk dato/tid da diagnosen ble bekreftet:\n1. prøvetakningsdato for første positiv histologi/cytologi \n2. Mottaksdato så svardato for patologiprøve. \n3. Andre undersøkelser som bildediagnostikk, blodprøve etc. hvor man bestemmer seg for at pasienten har\nkreft.",
             "comment" : "Delvise datoer er tillatt. Dersom individet er under ett år gammel, må komplett dato eller som et minimum måned og år oppgis for å muliggjøre presise beregninger av alder, f.eks. ved bruk i beslutningsstøttesystemer. Data registrert eller importert som \"alder ved tidspunkt når diagnosen stilles\" bør konverteres til en dato ved hjelp av individets fødselsdato."
           },
@@ -2393,136 +2410,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0022.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0004.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "372087000",
-                                    "value" : "Primærtumor (med eller uten metastase(r))",
-                                    "translations" : {
-                                      "nb" : "Primærtumor (Primary malignant neoplasm)"
-                                    }
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "25173007",
-                                    "value" : "Lokalt residiv (med eller uten metastase(r))",
-                                    "translations" : {
-                                      "nb" : "Residiv (Recurrent neoplasm)"
-                                    }
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "74964007",
-                                    "value" : "Annet"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0005.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.91" ],
-                                  "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0040.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0025.1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
                       "occurrences" : "0..1",
                       "nodeId" : "at0022.2",
                       "attributes" : [ {
@@ -2615,7 +2502,7 @@
                                   "@type" : "C_TERMINOLOGY_CODE",
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
-                                  "constraint" : [ "ac0.102" ],
+                                  "constraint" : [ "ac0.173" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -2681,16 +2568,10 @@
             "text" : "Specific problem or diagnosis (2)",
             "description" : "Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose."
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         },
@@ -2705,28 +2586,8 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Kartleggingsspørsmål om problemer eller diagnoser (tumorhendelse)",
+            "text" : "Kartlegging sykdomsepistodetype (tumor hendelse)",
             "comment" : "Registrering av aktuelle tumorhendelse.",
-            "description" : ""
-          },
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Spesifikt problem eller diagnose",
-            "description" : ""
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.1",
-            "text" : "Sykdomsutvikling (tumorhendelse)",
-            "description" : "Angi tumorhendelsen som var årsaken til den aktuelle henvisningen som har utløst opprettelsen av dette utredningssdokumentet.",
-            "comment" : "Designkommenar:\nDette er hentet fra utredningen for å si noe om dette gjelder primærtumor eller noe annet. Mulig at man egentlig bare skulle hatt primærtumor og metastase her. \nI den tyske versjonen for tumorutvikling har de her skilt mellom primærtumor og residiv. For å ha det samme mønsteret så har jeg nå bare satt inn primætrumor og residiv. \n\n-372087000 - Primærtumor (med eller uten metastase(r))  - Primary malignant neoplasm (disorder) \n-25173007 - Lokalt residiv (med eller uten metastase(r)) - Recurrent neoplasm (disorder) -128462008 - Kun metastase(r) Metastatic malignant neoplasm (disorder) \n-74964007 - Annet  Other (qualifier value) "
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005.1",
-            "text" : "Tilstede?",
-            "comment" : "Settes automatisk til \"Ja\" ved valg av tumorhendelse.",
             "description" : ""
           },
           "at0034.1" : {
@@ -2738,16 +2599,16 @@
           "at0028.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0028.1",
-            "text" : "Hva er pasientens sykdomsstatus ved denne kontakten?",
+            "text" : "Problemer eller diagnoser?",
             "description" : "Finnes det noen bekymringer, plager, problemer eller diagnoser. som er innenfor kartleggingsformålet?",
             "comment" : "designkommentar:\nHvis det velges 6 - Ny primær kreftsykdom, må det komme opp en kommentar om at man må registrere en ny kreftsak med et nytt utredningsdokument. \n\nHvis det velges 7 - Annet må det skrives i kommentar her."
           },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
-            "text" : "Sykdomsstatus",
+            "text" : "Sykdomsepisodetype",
             "description" : "",
-            "comment" : "1 Ingen tegn til sykdom (NED) ->  \n  1373027001 | Malignant neoplasm in remission (disorder) | \n  103338009 | In full remission (qualifier value) | \n  277022003 | Remission phase (qualifier value) | \nNED ikke nødvendigvis betyr kurert eller varig sykdomsfri. \n\n2 Stabil sykdom ->  \n  58158008 Stable (qualifier value) eller  \n  359746009 Patient's condition stable (finding) \n  359748005 Patient condition unchanged (finding) \n-stable er kanskje best fordi kodeverkverdien er selve sykdomsstatusen \"Stabil sykdom\". \n\n 3 Sykdomsprogresjon - ->  \n  1371415000 Malignant neoplastic disease progression (finding),  \n  271299001 Patient's condition worsened (finding) \n  246450006 Progression (attribute) ( dårlig alternativ fordi det er et modelleringsattributt i SNOMED.) \n\n4 Tilbakefall (residiv) -->  \n   1251564008 Relapsing malignant neoplastic disease eller  \n   255227004 | Recurrent (qualifier value) \n\n5 Transformasjon -->  \n    278178002 Transformed phase \n\n6 Ny primær kreftsykdom -->  \n   878806005 Second primary cancer \n\n7 Annet -->  \n   74964007 Other ((qualifier value) "
+            "comment" : "Kalt \"Disease episode type\" - Sykdomshendelsetype, og er disse tre endringene man er ute etter: \n -Residiv (Recurrence)\n- Progresjon (Progression)\n- Transformasjon (Transformation)\n\ni tillegg har vi flere som de ønsker å notere:\n\n1 Ingen tegn til sykdom (NED) ->  \n  1373027001 | Malignant neoplasm in remission (disorder) | \n  103338009 | In full remission (qualifier value) | \n  277022003 | Remission phase (qualifier value) | \nNED ikke nødvendigvis betyr kurert eller varig sykdomsfri. \n\n2 Stabil sykdom ->  \n  58158008 Stable (qualifier value) eller  \n  359746009 Patient's condition stable (finding) \n  359748005 Patient condition unchanged (finding) \n-stable er kanskje best fordi kodeverkverdien er selve sykdomsstatusen \"Stabil sykdom\". \n\n 3 Sykdomsprogresjon - ->  \n  1371415000 Malignant neoplastic disease progression (finding),  \n  271299001 Patient's condition worsened (finding) \n  246450006 Progression (attribute) ( dårlig alternativ fordi det er et modelleringsattributt i SNOMED.) \n\n4 Tilbakefall (residiv) -->  \n   1251564008 Relapsing malignant neoplastic disease eller  \n   255227004 | Recurrent (qualifier value) \n\n5 Transformasjon -->  \n    278178002 Transformed phase \n\n6 Ny primær kreftsykdom -->  \n   878806005 Second primary cancer \n\n7 Annet -->  \n   74964007 Other ((qualifier value) "
           },
           "at0004.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -2760,7 +2621,7 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0005.2",
             "text" : "Tilstede?",
-            "comment" : "Settes automatisk til \"Ja\" ved valg av tumorhendelse.",
+            "comment" : "Designkommentar:\nVises ikke i skjermbildet. \nSettes automatisk til \"Ja\" ved valg av en av sykdomsstatusene.",
             "description" : ""
           },
           "at0040.2" : {
@@ -2770,16 +2631,10 @@
             "description" : "Tidsangivelsen for bekymringen, plagen, problemet eller diagnosen.",
             "comment" : "Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bekymringen, plagen, problemet eller diagnosen i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Bekymringen, plagen, problemet eller diagnosen faktiske dato og/eller klokkeslett, start- og slutttid for bekymringen, plagen, problemet eller diagnosen, et tidsintervall for når bekymringen, plagen, problemet eller diagnosen oppstod, varigheten av bekymringen, plagen, problemet eller diagnosen, individets alder på tidspunktet for bekymringen, plagen, problemet eller diagnosen, eller hvor lenge det siden det oppstod. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         },
@@ -2790,16 +2645,10 @@
             "text" : "Bestimmter Zustand (2)",
             "description" : "Details zu einer spezifischen Beschwerde, Diagnose oder zu einem bestimmten Problem oder einer Gruppe an Beschwerden, Problemen oder Diagnosen, die für das Screening relevant sind."
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         },
@@ -2810,16 +2659,10 @@
             "text" : "*Specifieke aandoening (2)",
             "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         },
@@ -2830,16 +2673,10 @@
             "text" : "Problema o diagnòstic específic (2)",
             "description" : "Dades sobre una qüestió, problema o diagnòstic específic, o grup de problemes o diagnòstics rellevants per a un objectiu de detecció."
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         },
@@ -2850,16 +2687,10 @@
             "text" : "Problème ou diagnostic spécifique (2)",
             "description" : "Détails sur une question, un problème ou un diagnostic spécifique ou un groupe de problèmes ou de diagnostics pertinents pour l'objectif du dépistage."
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         },
@@ -2870,16 +2701,10 @@
             "text" : "Nombre del problema o diagnóstico (2)",
             "description" : "Detalles sobre la cuestión, problema o diagnóstico o grupo de problemas o diagnósticos relevantes para el propósito de la detección."
           },
-          "ac0.91" : {
+          "ac0.173" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.91",
-            "description" : ""
-          },
-          "ac0.102" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.102",
+            "code" : "ac0.173",
             "description" : ""
           }
         }
@@ -3385,6 +3210,361 @@
         "ac0.102" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.102",
+          "members" : [ "at0023" ]
+        },
+        "ac0.103" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.103",
+          "members" : [ "at0023" ]
+        },
+        "ac0.104" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.104",
+          "members" : [ "at0023" ]
+        },
+        "ac0.105" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.105",
+          "members" : [ "at0023" ]
+        },
+        "ac0.106" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.106",
+          "members" : [ "at0023" ]
+        },
+        "ac0.107" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.107",
+          "members" : [ "at0023" ]
+        },
+        "ac0.108" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.108",
+          "members" : [ "at0023" ]
+        },
+        "ac0.109" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.109",
+          "members" : [ "at0023" ]
+        },
+        "ac0.110" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.110",
+          "members" : [ "at0023" ]
+        },
+        "ac0.111" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.111",
+          "members" : [ "at0023" ]
+        },
+        "ac0.112" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.112",
+          "members" : [ "at0023" ]
+        },
+        "ac0.113" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.113",
+          "members" : [ "at0023" ]
+        },
+        "ac0.114" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.114",
+          "members" : [ "at0023" ]
+        },
+        "ac0.115" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.115",
+          "members" : [ "at0023" ]
+        },
+        "ac0.116" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.116",
+          "members" : [ "at0023" ]
+        },
+        "ac0.117" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.117",
+          "members" : [ "at0023" ]
+        },
+        "ac0.118" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.118",
+          "members" : [ "at0023" ]
+        },
+        "ac0.119" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.119",
+          "members" : [ "at0023" ]
+        },
+        "ac0.120" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.120",
+          "members" : [ "at0023" ]
+        },
+        "ac0.121" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.121",
+          "members" : [ "at0023" ]
+        },
+        "ac0.122" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.122",
+          "members" : [ "at0023" ]
+        },
+        "ac0.123" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.123",
+          "members" : [ "at0023" ]
+        },
+        "ac0.124" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.124",
+          "members" : [ "at0023" ]
+        },
+        "ac0.125" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.125",
+          "members" : [ "at0023" ]
+        },
+        "ac0.126" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.126",
+          "members" : [ "at0023" ]
+        },
+        "ac0.127" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.127",
+          "members" : [ "at0023" ]
+        },
+        "ac0.128" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.128",
+          "members" : [ "at0023" ]
+        },
+        "ac0.129" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.129",
+          "members" : [ "at0023" ]
+        },
+        "ac0.130" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.130",
+          "members" : [ "at0023" ]
+        },
+        "ac0.131" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.131",
+          "members" : [ "at0023" ]
+        },
+        "ac0.132" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.132",
+          "members" : [ "at0023" ]
+        },
+        "ac0.133" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.133",
+          "members" : [ "at0023" ]
+        },
+        "ac0.134" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.134",
+          "members" : [ "at0023" ]
+        },
+        "ac0.135" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.135",
+          "members" : [ "at0023" ]
+        },
+        "ac0.136" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.136",
+          "members" : [ "at0023" ]
+        },
+        "ac0.137" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.137",
+          "members" : [ "at0023" ]
+        },
+        "ac0.138" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.138",
+          "members" : [ "at0023" ]
+        },
+        "ac0.139" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.139",
+          "members" : [ "at0023" ]
+        },
+        "ac0.140" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.140",
+          "members" : [ "at0023" ]
+        },
+        "ac0.141" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.141",
+          "members" : [ "at0023" ]
+        },
+        "ac0.142" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.142",
+          "members" : [ "at0023" ]
+        },
+        "ac0.143" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.143",
+          "members" : [ "at0023" ]
+        },
+        "ac0.144" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.144",
+          "members" : [ "at0023" ]
+        },
+        "ac0.145" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.145",
+          "members" : [ "at0023" ]
+        },
+        "ac0.146" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.146",
+          "members" : [ "at0023" ]
+        },
+        "ac0.147" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.147",
+          "members" : [ "at0023" ]
+        },
+        "ac0.148" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.148",
+          "members" : [ "at0023" ]
+        },
+        "ac0.149" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.149",
+          "members" : [ "at0023" ]
+        },
+        "ac0.150" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.150",
+          "members" : [ "at0023" ]
+        },
+        "ac0.151" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.151",
+          "members" : [ "at0023" ]
+        },
+        "ac0.152" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.152",
+          "members" : [ "at0023" ]
+        },
+        "ac0.153" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.153",
+          "members" : [ "at0023" ]
+        },
+        "ac0.154" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.154",
+          "members" : [ "at0023" ]
+        },
+        "ac0.155" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.155",
+          "members" : [ "at0023" ]
+        },
+        "ac0.156" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.156",
+          "members" : [ "at0023" ]
+        },
+        "ac0.157" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.157",
+          "members" : [ "at0023" ]
+        },
+        "ac0.158" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.158",
+          "members" : [ "at0023" ]
+        },
+        "ac0.159" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.159",
+          "members" : [ "at0023" ]
+        },
+        "ac0.160" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.160",
+          "members" : [ "at0023" ]
+        },
+        "ac0.161" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.161",
+          "members" : [ "at0023" ]
+        },
+        "ac0.162" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.162",
+          "members" : [ "at0023" ]
+        },
+        "ac0.163" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.163",
+          "members" : [ "at0023" ]
+        },
+        "ac0.164" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.164",
+          "members" : [ "at0023" ]
+        },
+        "ac0.165" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.165",
+          "members" : [ "at0023" ]
+        },
+        "ac0.166" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.166",
+          "members" : [ "at0023" ]
+        },
+        "ac0.167" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.167",
+          "members" : [ "at0023" ]
+        },
+        "ac0.168" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.168",
+          "members" : [ "at0023" ]
+        },
+        "ac0.169" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.169",
+          "members" : [ "at0023" ]
+        },
+        "ac0.170" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.170",
+          "members" : [ "at0023" ]
+        },
+        "ac0.171" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.171",
+          "members" : [ "at0023" ]
+        },
+        "ac0.172" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.172",
+          "members" : [ "at0023" ]
+        },
+        "ac0.173" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.173",
           "members" : [ "at0023" ]
         }
       }
@@ -15691,8 +15871,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Problem/diagnose-kvalifikator tumorstatus",
-            "description" : "Kontekst- eller tidsspesifikk kvalifikator for et problem eller en diagnose.",
-            "comment" : "Designkommentar_\nSe på arketypen https://arketyper.no/ckm/archetypes/1078.36.3086 - Tumorstatus fra HighMed."
+            "description" : "",
+            "comment" : "Designkommentar_\nDenne hentes fra kartlegging om Sykdomsutvikling (tumorhendelse), som egentlig bør kanskje være på toppen av dokumentet, hvis man skal ha det med i det hele tatt i et poliklinisk notat. \n\n\n-372087000 - Primærtumor (med eller uten metastase(r))  - Primary malignant neoplasm (disorder) \n-25173007 - Lokalt residiv (med eller uten metastase(r)) - Recurrent neoplasm (disorder) -128462008 - Kun metastase(r) Metastatic malignant neoplasm (disorder) \n-74964007 - Annet  Other (qualifier value) "
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -16511,6 +16691,452 @@
         "codeString" : "es"
       },
       "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "d6583265-f815-434e-bfa0-0194f2d31e44",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "50FC8A4E53830E22AF210F49492476F8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0065.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0064.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0055.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "sl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Anatomisk lokalisering metastaser",
+            "description" : "Et fysisk sted på eller inne i menneskekroppen."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "ca" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0080", "at0081", "at0075", "at0076", "at0082", "at0077", "at0078", "at0079" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0062", "at0056", "at0057", "at0058", "at0059", "at0060", "at0063" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "e9ac6a45-2241-4eaa-971c-78d9656437e7",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Darin Leonhardt",
+        "organisation" : "PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "ballout.sarah@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Linda Aulin, Romi Shweta Pathak, Henna Haapa Hybinette, sofia Lång Janstad, Sajjad Saffari Miandoab",
+        "organisation" : "Region Östergötland, Region Stockholm, Karolinska universitetssjukhuset, Karolinska University Hospital",
+        "email" : "asa.skagerhult@regionostergotland.se, linda.aulin@sll.se, romi.pathak@regionstockholm.se, henna.haapa-hybinette@regionstockholm.se, sofia.lang-janstad@regionstockholm.se, sajjad.saffari-miandoab@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen, Vebjørn Arntzen, Liv Laugen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway, Oslo University Hospital, ​Oslo University Hospital, Norway",
+        "email" : "varntzen@ous-hf.no, liv.laugen@ous-hf.no"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Biljana Princic"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Michiel Klitsie",
+        "organisation" : "Nedap Healthcare",
+        "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "TRADCREA"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
       "otherDetails" : { }
     } ]
   } ],
