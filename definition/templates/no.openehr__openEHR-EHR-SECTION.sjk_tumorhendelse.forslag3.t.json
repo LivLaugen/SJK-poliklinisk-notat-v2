@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "3c5248d8fd2864b51fbdc3327270eec2",
+      "MD5-CAM-1.0.1" : "7e379234db47c37f18e1724882a677b7",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "33.0.0",
+      "sem_ver" : "34.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -2433,6 +2433,10 @@
                                     "terminologyId" : "no.onk_sykdomsstatus",
                                     "code" : "1",
                                     "value" : "Ingen tegn til sykdom (NED)"
+                                  }, {
+                                    "terminologyId" : "no.onk_sykdomsstatus",
+                                    "code" : "8",
+                                    "value" : "I remisjon???"
                                   }, {
                                     "terminologyId" : "no.onk_sykdomsstatus",
                                     "code" : "2",
