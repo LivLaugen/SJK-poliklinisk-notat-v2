@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "422b8e99647984679fa0cb8f33068b2c",
+      "MD5-CAM-1.0.1" : "30dc5853c8e4cca341daca0f23ae7e9f",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
       "sem_ver" : "2.0.1",
       "build_uid" : ""
@@ -3404,7 +3404,10 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "no.onk.komplikasjoner_kreftbehandling",
                                 "code" : "1",
-                                "value" : "Bivirkninger eller komplikasjoner- basline registrering"
+                                "value" : "Bivirkninger eller komplikasjoner- basline registrering",
+                                "translations" : {
+                                  "nb" : "Bivirkninger eller komplikasjoner- baseline registrering"
+                                }
                               }, {
                                 "terminologyId" : "no.onk.komplikasjoner_kreftbehandling",
                                 "code" : "2",
