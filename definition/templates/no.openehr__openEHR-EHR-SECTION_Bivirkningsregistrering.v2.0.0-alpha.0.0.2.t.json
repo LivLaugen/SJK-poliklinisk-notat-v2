@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "04b570d794b2ca0904dc9059815a1e16",
+      "MD5-CAM-1.0.1" : "422b8e99647984679fa0cb8f33068b2c",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "2.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -3485,7 +3485,7 @@
             "code" : "at0028.2",
             "text" : "Komplikasjoner/bivirkninger",
             "description" : "Baseline-registrering: Utføres før behandlingsstart for å dokumentere eksisterende symptomer eller bivirkninger.",
-            "comment" : "Designkommentar:\nHvis det svares \"ja\" her skal man registrere dette i Anamnesearketypen med point in time \"Basline\" behandling\" og som inneholder CTCAE "
+            "comment" : "Designkommentar:\nHvis det svares \"ja\" her skal man registrere dette i Anamnesearketypen med point in time \"Basline\" behandling\" og som inneholder CTCAE \n\nHvis du sier Nei - så er det ingen bivirkninger. \nburde det i så fall være en 3 verdi i kodeverket som heter \"ingen bivirkning\" i tillegg til baseline og under behandling. "
           },
           "at0034.2" : {
             "@type" : "ARCHETYPE_TERM",
