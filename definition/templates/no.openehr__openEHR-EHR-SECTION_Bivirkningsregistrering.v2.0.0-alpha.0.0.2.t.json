@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8b6f9dd5df3103fed26088d325200e5b",
+      "MD5-CAM-1.0.1" : "04b570d794b2ca0904dc9059815a1e16",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.1",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -3359,14 +3359,18 @@
                               "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "0..1",
                               "terminologyId" : {
-                                "value" : "no.onk.kartlegging"
+                                "value" : "no.onk.kart.tidligere_komplikasjoner_kreftbehandling"
                               },
                               "constraint" : [ ],
-                              "selectedTerminologies" : [ "no.onk.kartlegging" ],
+                              "selectedTerminologies" : [ "no.onk.kart.tidligere_komplikasjoner_kreftbehandling" ],
                               "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "no.onk.kartlegging",
-                                "code" : "12",
-                                "value" : "komplikasjoner_kreftbehandling"
+                                "terminologyId" : "no.onk.kart.tidligere_komplikasjoner_kreftbehandling",
+                                "code" : "1",
+                                "value" : "Baseline"
+                              }, {
+                                "terminologyId" : "no.onk.kart.tidligere_komplikasjoner_kreftbehandling",
+                                "code" : "2",
+                                "value" : "Under behandling"
                               } ]
                             } ]
                           } ],
