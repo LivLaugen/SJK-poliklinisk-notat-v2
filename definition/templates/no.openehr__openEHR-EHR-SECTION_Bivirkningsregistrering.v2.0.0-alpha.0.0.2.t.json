@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "30dc5853c8e4cca341daca0f23ae7e9f",
+      "MD5-CAM-1.0.1" : "bc8f0254b8f6077eb6f957a2701d02a5",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "2.0.1",
+      "sem_ver" : "3.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -3406,16 +3406,26 @@
                                 "code" : "1",
                                 "value" : "Bivirkninger eller komplikasjoner- basline registrering",
                                 "translations" : {
-                                  "nb" : "Bivirkninger eller komplikasjoner- baseline registrering"
+                                  "nb" : "Kontakt uten nye bivirkninger/komplikasjoner (evt. Ingen bivirkninger/komplikasjoner)"
+                                }
+                              }, {
+                                "terminologyId" : "no.onk.komplikasjoner_kreftbehandling",
+                                "code" : "3",
+                                "value" : "Kontakt med nye birkninger/komplikasjoner",
+                                "translations" : {
+                                  "nb" : "Kontakt med nye birkninger/komplikasjoner (evt. Nye bivirkninger/komplikasjoner)"
                                 }
                               }, {
                                 "terminologyId" : "no.onk.komplikasjoner_kreftbehandling",
                                 "code" : "2",
-                                "value" : "Kontakt uten nye bivirkninger/komplikasjoner"
+                                "value" : "Kontakt uten nye bivirkninger/komplikasjoner",
+                                "translations" : {
+                                  "nb" : "Bivirkninger eller komplikasjoner- baseline registrering (evt. Baseline bivirkninger/komplikasjoner)"
+                                }
                               }, {
                                 "terminologyId" : "no.onk.komplikasjoner_kreftbehandling",
-                                "code" : "3",
-                                "value" : "Kontakt med nye birkninger/komplikasjoner"
+                                "code" : "4",
+                                "value" : "Ingen bivirkninger, men CTCAE registrering"
                               } ]
                             } ]
                           } ],
